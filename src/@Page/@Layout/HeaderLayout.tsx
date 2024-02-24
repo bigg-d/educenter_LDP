@@ -23,7 +23,7 @@ const HeaderLayout = () => {
   ];
   const renderNavList = () => {
     return (
-      <nav className="flex justify-center">
+      <nav className="flex justify-center ">
         <ul
           className={clsx("", {
             "w-[80%]  flex flex-col items-center mt-5": !isTable,
@@ -48,7 +48,7 @@ const HeaderLayout = () => {
     );
   };
   return (
-    <div className="w-full bg-white flex justify-center">
+    <div className="w-full bg-white flex justify-center sticky top-0 z-10 shadow-md">
       <div className="w-[90%] h-20 flex items-center justify-between">
         <div className="flex gap-12 ">
           <span className="text-[1.4rem] font-bold">EduCenter</span>

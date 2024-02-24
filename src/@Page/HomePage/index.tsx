@@ -1,13 +1,10 @@
 import type { NextPage } from "next";
-import FooterLayout from "../@Layout/FooterLayout";
-import HeaderLayout from "../@Layout/HeaderLayout";
+import Layout from "../@Layout";
+import IntroduceLayout from "../Introduce/index"
 const HomePage: NextPage = () => {
   return <div>
-    <HeaderLayout/>
-    <FooterLayout/>
-
+   <Layout introduceLayout={<IntroduceLayout />}/>
   </div>;
 };
 
 export default HomePage;
-  
