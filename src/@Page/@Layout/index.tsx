@@ -16,7 +16,7 @@ const Layout = (props: Props) => {
                 {props.introduceLayout} 
                 {props.children} 
             </section>
-            {/* <FooterLayout /> */}
+            <FooterLayout />
         </>
     );
 };

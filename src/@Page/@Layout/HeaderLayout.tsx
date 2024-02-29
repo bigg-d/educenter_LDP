@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import { usePathname } from 'next/navigation'
 const HeaderLayout = () => {
   const pathname = usePathname()
-  const isTable = useMediaQuery("(min-width:768px)");
+  const isTable = useMediaQuery("(min-width:788px)");
   const { renderSearchIcon, renderSearchBox } = useCoreSearchExamContext();
   const [openMenu, setOpenMenu] = useState(false);
   const navList = [

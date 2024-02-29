@@ -5,7 +5,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
-
+import CoreCarousel from "../hook/CoreCarousel";
 const Banner = () => {
   const pathname = usePathname();
   const [showAll, setShowAll] = useState(false)
@@ -77,7 +77,7 @@ const Banner = () => {
         </div>
 
         <div className="">
-          <>
+          <div className="flex flex-col gap-5">
             <div
               className={clsx("flex gap-2", {
                 "flex justify-between gap-0 ": mobile,
@@ -96,19 +96,34 @@ const Banner = () => {
                     }
                   )}
                 >
-                  <Button className="rounded-full">
+                        
+                  <Button className="rounded-full" >
                     <span className="text-black font-semibold">
                       {item.year}
                     </span>
                   </Button>
                 </div>
               ))}
+              {/* <div className="inline-flex items-center gap-[12px] p-[12px] relative   border border-solid border-transparent [border-image:linear-gradient(to_bottom,rgb(62,96.39,254),rgb(210,60,255))_1] ">
+          phong
+        </div> */}
             </div>
-
-            <div className="w-full  h-auto flex-col flex gap-5 mt-5 ">
+            
+            <div className={clsx("",{
+              "w-full  h-auto flex-col flex gap-5 mt-5 ":mobile,
+              "flex   flex-nowrap gap-4":tablet
+            })}>
+              
               {frameList.map((item, index) =>
                 item.items?.map((pro, indexPro) => (
-                  <div className="flex flex-col " key={indexPro}>
+                  
+                  <div key={indexPro} className={clsx("",{
+                    "flex flex-col":mobile,
+                    "flex flex-col gap-5 ":tablet
+                  })} >
+                    {tablet && (
+                      <div className="bg-gradient-to-r from-[#3E60FE] to-[#D23CFF] text-transparent bg-clip-text  font-semibold">{item.year}</div>
+                    )}
                     <div className="flex gap-5">
                       <div className="w-5 h-5 relative">
                         <div className="w-2 h-2 left-[6px] top-[6px] absolute bg-slate-300 rounded-full" />
@@ -131,13 +146,17 @@ const Banner = () => {
 
                     </div>
                   </div>
+                  
                 ))
               )}
+              
             </div>
-          </>
+
+          </div>
         </div>
       </div>
     </div>
+    
   );
 };
 
