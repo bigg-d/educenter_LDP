@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@media only screen and (max-width: 475px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 475px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1536px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@layer components {
+  .text-m18 {
+    @apply text-[1.125rem];
+    @apply font-normal;
+    @apply font-medium;
+    @apply leading-[1.625rem];
+    @apply tracking-tighter;
+    @apply text-[#1A1A1E];
+  }
+
+  .btn-gradient {
+    @apply rounded-[30px] cursor-pointer text-[1rem] desktop:text-[1.4rem] laptop:text-[1.1rem] inline-block bg-gradient-to-r from-mainBlue to-mainViolet py-2 px-4  laptop:px-6 laptop:py-4 text-white transition-all duration-300;
+    @apply hover:shadow-lg hover:-translate-y-[2px];
+  }
+
+  .btn-default {
+    @apply rounded-[30px] cursor-pointer text-[1rem] desktop:text-[1.4rem] laptop:text-[1.1rem] px-4 py-2 inline-block bg-white text-[#4A4A4A] border-2 font-[500] laptop:px-6 laptop:py-4 transition-all duration-300;
+    @apply hover:shadow-lg hover:-translate-y-[2px];
+  }
+  .btn-primary {
+    @apply rounded-[30px] cursor-pointer text-[1rem] desktop:text-[1.4rem] laptop:text-[1.1rem] px-4 py-2 inline-block bg-blue-500 text-white border-2 font-[500] laptop:px-6 laptop:py-4 transition-all duration-300;
+    @apply hover:shadow-lg hover:-translate-y-[2px];
+  }
+}
+@layer components {
+  .text-sb12 {
+    @apply text-[0.75rem];
+    @apply not-italic;
+    @apply font-semibold;
+    @apply leading-[1.25rem];
+    @apply tracking-tighter;
+  }
+  .text-m14 {
+    @apply text-[0.875rem];
+    @apply not-italic;
+    @apply font-medium;
+    @apply leading-[1.25rem];
+  }
+  .text-m16 {
+    @apply text-[1rem];
+    @apply not-italic;
+    @apply font-medium;
+    @apply leading-[1.5rem];
+  }
+  .text-sb16 {
+    @apply text-[1rem];
+    @apply not-italic;
+    @apply font-semibold;
+    @apply leading-[1.5rem];
+  }
+  .text-m18 {
+    @apply text-[1.125rem];
+    @apply not-italic;
+    @apply font-medium;
+    @apply leading-[1.625rem];
+    @apply tracking-tighter;
+  }
+  .text-sb18 {
+    @apply text-[1.125rem];
+    @apply not-italic;
+    @apply font-semibold;
+    @apply leading-[1.75rem];
+  }
+  .text-m22 {
+    @apply text-[2.5rem];
+    @apply not-italic;
+    @apply font-semibold;
+  }
+  .text-sb22 {
+    @apply text-[1.375rem];
+    @apply not-italic;
+    @apply font-semibold;
+    @apply leading-[2rem];
+  }
+  .text-sb28 {
+    @apply text-[1.75rem];
+    @apply not-italic;
+    @apply font-semibold;
+    @apply leading-[2.25rem];
+  }
+  .text-sb36 {
+    @apply text-[2.25rem];
+    @apply not-italic;
+    @apply font-semibold;
+    @apply leading-[3rem];
+  }
+  .btn-gradient {
+    @apply rounded-[30px] text-[1rem] desktop:text-[1.4rem] inline-block bg-gradient-to-r from-mainBlue to-mainViolet py-2 px-4  desktop:px-6 desktop:py-4 text-white transition-all duration-300;
+    @apply hover:shadow-lg;
+  }
+
+  .btn-default {
+    @apply rounded-[30px] text-[1rem] desktop:text-[1.4rem] px-4 py-2 inline-block bg-white text-[#4A4A4A] border-2 font-[500] desktop:px-6 desktop:py-4 transition-all duration-300;
+    @apply hover:shadow-lg;
+  }
+}
