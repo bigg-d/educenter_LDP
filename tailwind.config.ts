@@ -113,6 +113,26 @@ const config: Config = {
             zIndex: "2",
           },
         },
+        zoomIn: {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0) translateY(-100%)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1) translateY(-50%)",
+          },
+        },
+        zoomOut: {
+          "0%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "scale(0)",
+          },
+        },
       },
       animation: {
         fadeIn: "fadeIn ease 1.2s",
@@ -122,6 +142,8 @@ const config: Config = {
         "img-service-1": "img-service-1 20s infinite",
         "img-service-2": "img-service-2 20s infinite",
         "img-service-3": "img-service-3 20s infinite",
+        zoomIn: "zoomIn ease 1s",
+        zoomOut: "zoomOut ease 1s",
       },
       backgroundImage: {
         mainGradient: "linear-gradient(90.57deg, #3E65FE 0%, #D23CFF 100%)",

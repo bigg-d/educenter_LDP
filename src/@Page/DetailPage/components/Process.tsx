@@ -1,7 +1,8 @@
+"use client";
 import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 
 const Process = () => {
-  const {mobile} = useBreakpoints();
+  const { mobile } = useBreakpoints();
   const process = Array(15).fill("");
   const steps = [];
   return (
@@ -73,54 +74,54 @@ const Process = () => {
 
       <ul className="desktop:hidden grid grid-cols-1 divide-y text-white">
         <li className="w-full flex items-center divide-x">
-            <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
-              {mobile ? "GD": "Giai đoạn"} 1
+          <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
+            {mobile ? "GD" : "Giai đoạn"} 1
+          </h3>
+          <div className="w-full p-3 tablet:p-4">
+            <h3 className="bg-[#3E65FE] text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
+              Nghiên cứu dự án
             </h3>
-            <div className="w-full p-3 tablet:p-4">
-                <h3 className="bg-[#3E65FE] text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
-                Nghiên cứu dự án
-                </h3>
-            </div>
+          </div>
         </li>
         <li className="w-full flex items-center divide-x">
-            <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
-              {mobile ? "GD": "Giai đoạn"} 2
+          <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
+            {mobile ? "GD" : "Giai đoạn"} 2
+          </h3>
+          <div className="w-full p-3 tablet:p-4">
+            <h3 className="bg-[#6DCA4D] text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
+              Tìm giải pháp
             </h3>
-            <div className="w-full p-3 tablet:p-4">
-                <h3 className="bg-[#6DCA4D] text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
-                Tìm giải pháp
-                </h3>
-            </div>
+          </div>
         </li>
         <li className="w-full flex items-center divide-x">
-            <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
-              {mobile ? "GD": "Giai đoạn"} 3
+          <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
+            {mobile ? "GD" : "Giai đoạn"} 3
+          </h3>
+          <div className="w-full p-3 tablet:p-4">
+            <h3 className="bg-[#F8C238] text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
+              Tư vấn giải pháp
             </h3>
-            <div className="w-full p-3 tablet:p-4">
-                <h3 className="bg-[#F8C238] text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
-                Tư vấn giải pháp
-                </h3>
-            </div>
+          </div>
         </li>
         <li className="w-full flex items-center divide-x">
-            <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
-              {mobile ? "GD": "Giai đoạn"} 4
+          <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
+            {mobile ? "GD" : "Giai đoạn"} 4
+          </h3>
+          <div className="w-full p-3 tablet:p-4">
+            <h3 className="bg-[#8C7FFC] text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
+              Thiết kế sản phẩm và giải pháp
             </h3>
-            <div className="w-full p-3 tablet:p-4">
-                <h3 className="bg-[#8C7FFC] text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
-                Thiết kế sản phẩm và giải pháp
-                </h3>
-            </div>
+          </div>
         </li>
         <li className="w-full flex items-center divide-x">
-            <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
-              {mobile ? "GD": "Giai đoạn"} 5
+          <h3 className="w-1/4 text-sb12 tablet:text-m18 text-black text-center ">
+            {mobile ? "GD" : "Giai đoạn"} 5
+          </h3>
+          <div className="w-full p-3 tablet:p-4">
+            <h3 className="bg-mainGradient text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
+              Hoàn thiện và nhận đánh giá
             </h3>
-            <div className="w-full p-3 tablet:p-4">
-                <h3 className="bg-mainGradient text-[0.875rem] tablet:text-sb18 p-2 tablet:p-5  rounded-xl">
-                Hoàn thiện và nhận đánh giá
-                </h3>
-            </div>
+          </div>
         </li>
       </ul>
     </section>
