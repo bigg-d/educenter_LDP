@@ -102,7 +102,7 @@ export default function ContactForm() {
               </div>
             </div>
             <button
-              className="rounded-md self-end laptop:my-7 w-full laptop:w-auto transition-all duration-200 font-bold hover:bg-mainBlue hover:text-white text-mainBlue bg-white px-6 py-4 border border-mainBlue"
+              className="rounded-md self-end laptop:my-7 desktop:my-12 w-full laptop:w-auto transition-all duration-200 font-bold hover:bg-mainBlue hover:text-white text-mainBlue bg-white px-6 py-4 border border-mainBlue"
               type="submit"
             >
               Đăng ký tư vấn

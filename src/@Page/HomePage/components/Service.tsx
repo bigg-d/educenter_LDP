@@ -365,12 +365,12 @@ export function ScrollTablet() {
   }, []);
   return (
     <div className="laptop:w-full mx-auto tablet:w-[90%] flex justify-between ">
-      <div className="tablet:w-[45%] desktop:w-2/5 w-full ">
+      <div className="tablet:w-[45%] desktop:w-1/2e w-full ">
         {services.map((item, i) => (
           <div
             id={String(i)}
             key={item.title}
-            className="flex items-center h-[80vh]"
+            className="flex items-center h-[100vh]"
           >
             <div className="laptop:w-4/5 desktop:w-3/5 flex items-center">
               <div className="flex flex-col gap-8">

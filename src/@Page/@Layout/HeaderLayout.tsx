@@ -1,12 +1,13 @@
 "use client";
 import { Drawer, IconButton, useMediaQuery } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 // import { IoIosSearch } from "react-icons/io";
 import { IoIosMenu } from "react-icons/io";
 import useCoreSearchExamContext from "../core/useCoreSearchExamContext";
 // import { tree } from "next/dist/build/templates/app-page";
 import clsx from "clsx";
 // import { useRouter } from "next/router";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import HeaderContainer from "./HeaderContainer";
 const HeaderLayout = () => {
@@ -16,11 +17,11 @@ const HeaderLayout = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const navList = [
     { link: "/", name: "Trang Chủ" },
-    { link: "/gioithieu", name: "Giới Thiệu" },
-    { link: "/dichvu", name: "Dịch Vụ" },
-    { link: "/duan", name: "Dự Án" },
-    { link: "/tintuc", name: "Tin Tức" },
-    { link: "/lienhe", name: "Liên Hệ" },
+    { link: "/gioi-thieu-ve-educenter", name: "Giới Thiệu" },
+    { link: "/dich-vu-cua-chung-toi", name: "Dịch Vụ" },
+    { link: "/du-an-noi-bat-educenter", name: "Dự Án" },
+    { link: "/tin-tuc", name: "Tin Tức" },
+    { link: "/lien-he-voi-chung-toi", name: "Liên Hệ" },
   ];
   const renderNavList = () => {
     return (
@@ -52,10 +53,15 @@ const HeaderLayout = () => {
   };
   return (
     <HeaderContainer>
-      <div className="w-full bg-white flex justify-center sticky top-0 z-10 shadow-md">
+      <div className="sticky top-0 z-10 flex justify-center w-full bg-white shadow-md">
         <div className="w-[90%] h-20 flex items-center justify-between">
           <div className="flex gap-12 ">
-            <span className="text-[1.4rem] font-bold">EduCenter</span>
+            <Link href="/">
+              <span className="text-[1.4rem] font-bold duration-300 transition-all hover:text-mainBlue">
+                EduCenter
+              </span>
+            </Link>
+
             {isTable && (
               <div className="lg:max-w-[400px] min-w-[240px]">
                 <div>{renderSearchBox()}</div>
