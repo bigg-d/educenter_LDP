@@ -9,7 +9,7 @@ const Banner = () => {
   const { tablet, mobile, laptop, desktop } = useBreakpoints();
 
   return (
-    <section className=" flex items-center desktop:px-[15rem] tablet:px-[3.375rem] py-[6.25rem] justify-between">
+    <section className=" flex items-center desktop:px-[15rem] tablet:px-[3.375rem] desktop:py-[6.25rem] tablet:py-[2.5rem] justify-between">
       <div className="w-full desktop:pr-[7.5rem] tablet:w-1/2">
         <h2 className="bg-gradient-to-r from-[#3E60FE] to-[rgb(210,60,255)] text-transparent bg-clip-text font-semibold desktop:text-[2.75rem] tablet:text-[1.125rem]">
           Tạo đề thi, ôn thi, làm bài thi mọi lúc mọi nơi
@@ -51,7 +51,7 @@ const Banner = () => {
 
       <div
         className={clsx(
-          "tablet:w-1/2 laptop:w-2/5 desktop:w-2/5 h-[70vh] bg-cover flex items-center justify-center rounded-[50px]"
+          "tablet:w-1/2 laptop:w-2/5 desktop:w-2/5 desktop:h-[90vh] tablet:h-[50vh] bg-cover flex items-center justify-center rounded-[50px]"
         )}
         style={{
           backgroundImage: 'url("/images/home/bg_service.png")',

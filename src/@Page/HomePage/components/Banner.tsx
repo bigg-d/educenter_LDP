@@ -79,7 +79,7 @@ export function BannerImageBox() {
         <Image
           title="EduCenter"
           alt="Educenter"
-          layout="fill"
+          fill
           src="/images/home/banner_1.png"
         />
       </div>
@@ -87,7 +87,7 @@ export function BannerImageBox() {
         <Image
           title="EduCenter"
           alt="Educenter"
-          layout="fill"
+          fill
           src="/images/home/banner_2.png"
         />
       </div>

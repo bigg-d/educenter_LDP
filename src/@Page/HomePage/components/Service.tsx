@@ -102,7 +102,7 @@ export function Content3() {
               <div className="aspect-square w-[33.33px] relative">
                 <Image
                   src="/images/home/avatar.svg"
-                  layout="fill"
+                  fill
                   alt="EduCenter"
                 />
               </div>
@@ -129,7 +129,7 @@ export function Content3() {
             <div className="w-3/5 relative aspect-square">
               <Image
                 src="/images/home/bg_app_3.svg"
-                layout="fill"
+                fill
                 alt="EduCenter"
               />
             </div>
@@ -159,7 +159,7 @@ export function Content3() {
                   src="/images/home/major.svg"
                   title="EduCenter App"
                   alt="EduCenter"
-                  layout="fill"
+                  fill
                 />
               </div>
               <div className="bg-[#FFE484] text-[0.6rem] laptop:text-[0.8rem] text-[#B08515] py-2 px-4 shadow-md rounded-md font-[600]">
@@ -175,7 +175,7 @@ export function Content3() {
                   src="/images/home/skill.svg"
                   title="EduCenter App"
                   alt="EduCenter"
-                  layout="fill"
+                  fill
                 />
               </div>
             </div>
@@ -187,7 +187,7 @@ export function Content3() {
               alt="linh"
               title="EduCenter"
               src="/images/home/app_footer.svg"
-              layout="fill"
+              fill
             />
           </div>
         </div>
@@ -195,7 +195,7 @@ export function Content3() {
 
       {/* ui spin right */}
       <div className="absolute laptop:right-0 desktop:-bottom-[15%]  w-2/3 aspect-square -right-6 -bottom-12">
-        <Image src="/images/home/spin_app.svg" alt="EduCenter" layout="fill" />
+        <Image src="/images/home/spin_app.svg" alt="EduCenter" fill />
       </div>
     </div>
   );
@@ -210,7 +210,7 @@ export function Content4() {
           alt="EduCenter"
           title="EduCenter AI"
           src="/images/home/ai_ico.svg"
-          layout="fill"
+          fill
         />
       </div>
 

@@ -32,21 +32,28 @@ const Benefit = () => {
   return (
     <section className="relative flex flex-col desktop:pb-[6.25rem] tablet:pb-[2.5rem] z-0 ">
       <div className="w-full absolute top-0 desktop:aspect-[41/11] aspect-[768/489]">
-        <div className="w-[21.25rem] tablet:w-[59rem] aspect-square -left-[7.625rem] -top-[9rem] desktop:-left-[13.5%] desktop:-top-[52%] tablet:-left-[31rem] tablet:-top-[28.5rem] absolute bg-blue-500 rounded-full z-[1]" />
-        <div className="w-full hidden desktop:block desktop:w-[85%] top-0 desktop:top-[11rem] right-0 absolute aspect-[1646/592] ">
-          <Image src="/image/DetailPage/benefitBg.svg" alt="Educenter" fill />
+        <div className="w-[21.25rem] tablet:w-[943px] aspect-square -left-[7.625rem] -top-[9rem] desktop:-left-[13.5%] desktop:-top-[52%] tablet:-left-[31rem] tablet:-top-[28.5rem] absolute bg-blue-500 rounded-full z-[1]" />
+        <div className="w-full hidden desktop:block desktop:w-[85%] top-0 desktop:top-[11rem] right-0 absolute aspect-[823/296] ">
+          <Image src="/image/DetailPage/img_chooseBG.svg" alt="Educenter" fill />
         </div>
 
-        <div className="w-full desktop:hidden top-0 right-0 absolute aspect-[1646/592] transform scale-[1.75] translate-x-[-11%] translate-y-[37%] tablet:scale-[1.25] tablet:translate-x-[3%] tablet:translate-y-[12%]">
+        <div className="w-full hidden tablet:block desktop:hidden top-0 right-0 absolute aspect-[768/391] transform scale-[1.5] translate-x-[-13%] tablet:scale-[1] tablet:translate-x-0 translate-y-0">
           <Image
             src="/image/DetailPage/benefitBgTablet.svg"
             alt="Educenter"
             fill
           />
         </div>
+        <div className="w-[390px] tablet:hidden top-0 right-0 absolute aspect-[360/258]">
+          <Image
+            src="/image/DetailPage/img_chooseBgMobile.svg"
+            alt="Educenter"
+            fill
+          />
+        </div>
       </div>
       <div className="w-full pt-[2.5rem] desktop:pt-[14rem] tablet:pt-[3.125rem] px-[1.25rem] desktop:px-[15rem] tablet:px-[2rem] top-0  z-[1]">
-        <h2 className="w-2/3 desktop:w-1/2 tablet:w-2/5 tablet:px-[1.75rem] text-white text-[1.375rem] desktop:text-[3.75rem] tablet:text-[1.75rem] font-semibold mb-[5.25rem] tablet:mb-[6rem]">
+        <h2 className="w-2/3 tablet:w-2/5  text-white text-[1.375rem] desktop:text-[3.75rem] tablet:text-[1.75rem] font-semibold mb-[5.25rem] tablet:mb-[6rem]">
           Vì sao doanh nghiệp nên chọn dịch vụ của EduCenter
         </h2>
         <ul className="grid tablet:grid-cols-2 gap-5 tablet:gap-x-[3.75rem] tablet:gap-y-[2.5rem] p-[1.25rem] desktop:p-[3rem] tablet:p-[2rem] bg-white shadow-lg rounded-[1.75rem]">

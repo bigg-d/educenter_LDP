@@ -26,7 +26,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_1.svg"
-              layout="fill"
+              fill
             />
           </div>
           <div className="relative aspect-square w-[100px]">
@@ -34,7 +34,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_2.svg"
-              layout="fill"
+              fill
             />
           </div>
           <div className="relative aspect-square w-[100px]">
@@ -42,7 +42,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_3.svg"
-              layout="fill"
+              fill
             />
           </div>
           <div className="relative aspect-square w-[100px]">
@@ -50,7 +50,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_4.svg"
-              layout="fill"
+              fill
             />
           </div>
           <div className="relative aspect-square w-[100px]">
@@ -58,7 +58,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_5.svg"
-              layout="fill"
+              fill
             />
           </div>
         </div>

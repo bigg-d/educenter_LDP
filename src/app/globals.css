@@ -29,11 +29,10 @@
 @layer components {
   .text-m18 {
     @apply text-[1.125rem];
-    @apply font-normal;
+    @apply not-italic;
     @apply font-medium;
     @apply leading-[1.625rem];
     @apply tracking-tighter;
-    @apply text-[#1A1A1E];
   }
 
   .btn-gradient {

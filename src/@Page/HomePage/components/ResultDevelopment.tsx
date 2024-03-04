@@ -78,14 +78,14 @@ export default function ResultDevelopment() {
             <Image
               src="/images/home/tien_phong.svg"
               alt="Educenter"
-              layout="fill"
+              fill
               title="EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh
               viên của thương hiệu ‘trẻ’"
             />
           </div>
         </div>
         <div className="w-full laptop:w-1/2 relative laptop:order-2 order-1 aspect-video">
-          <Image src="/images/home/article.svg" alt="Educenter" layout="fill" />
+          <Image src="/images/home/article.svg" alt="Educenter" fill />
         </div>
       </div>
     </div>
