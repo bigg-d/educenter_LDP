@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 
 export default function Banner(): ReactNode {
   const { desktop, laptop, mobile, tablet } = useBreakpoints();
-  console.log("🚀 ~ Banner ~ laptop:", laptop);
+  // console.log("🚀 ~ Banner ~ laptop:", laptop);
   return (
     <div className="flex  flex-wrap laptop:flex-nowrap">
       <div className="flex items-center justify-center w-full laptop:w-1/2">
@@ -79,16 +79,16 @@ export function BannerImageBox() {
         <Image
           title="EduCenter"
           alt="Educenter"
-          layout="fill"
-          src="/images/home/banner_1.png"
+          fill
+          src="/images/home/img_1.svg"
         />
       </div>
       <div className="absolute w-3/5 aspect-[7.6/10] bottom-[5%] right-0 z-[1]">
         <Image
           title="EduCenter"
           alt="Educenter"
-          layout="fill"
-          src="/images/home/banner_2.png"
+          fill
+          src="/images/home/img_2.svg"
         />
       </div>
 

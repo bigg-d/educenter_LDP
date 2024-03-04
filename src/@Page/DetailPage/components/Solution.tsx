@@ -62,7 +62,7 @@ const Solution = () => {
       </div> */}
 
       {/* <div className="absolute w-full aspect-video">
-        <Image src='/image/DetailPage/starBackground.svg' layout="fill" alt="Educenter" title="Educenter" />
+        <Image src='/image/DetailPage/starBackground.svg' fill alt="Educenter" title="Educenter" />
       </div> */}
       <h2 className="relative font-semibold text-center text-sb18 desktop:text-[2.5rem] tablet:text-sb28 mb-[2rem] desktop:mb-[4.125rem] tablet:mb-[3.75rem] z-[1]">
         Giải pháp của chúng tôi

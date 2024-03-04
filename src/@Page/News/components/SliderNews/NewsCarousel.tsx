@@ -1,5 +1,6 @@
 "use client";
 
+import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
@@ -61,6 +62,8 @@ export default function NewCarousel() {
     },
   };
 
+  const { laptop } = useBreakpoints();
+
   return (
     <div className="slider-container">
       <Slider {...settings}>
@@ -71,10 +74,10 @@ export default function NewCarousel() {
             </div>
             <div
               className={clsx(
-                "absolute z-[1] w-1/3 rounded-[2.4rem] -translate-y-[50%] top-[50%] right-0 bg-white",
+                "laptop:absolute z-[1] laptop:w-1/3 laptop:rounded-[2.4rem] laptop:-translate-y-[50%] laptop:top-[50%] laptop:right-0 bg-white",
                 {
-                  "animate-zoomIn": currentIndex === index,
-                  "animate-zoomOut": currentIndex !== index,
+                  "animate-zoomIn": currentIndex === index && laptop,
+                  "animate-zoomOut": currentIndex !== index && laptop,
                 }
               )}
             >

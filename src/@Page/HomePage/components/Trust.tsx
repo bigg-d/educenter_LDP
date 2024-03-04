@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Trust() {
   return (
-    <div className="flex flex-col w-[90%] gap-4 laptop:flex-row desktop:w-4/5 mx-auto laptop:gap-[5%] my-12 laptop:my-24 items-end">
-      <div className="desktop:w-[45%] laptop:w-1/2 flex flex-col items-center laptop:items-start gap-2">
+    <div className="flex flex-col w-[90%] gap-4 justify-between laptop:flex-row desktop:w-4/5 mx-auto laptop:gap-[1%]  my-12 laptop:my-24 items-end">
+      <div className="desktop:w-[40%] laptop:w-1/2 flex flex-col items-center laptop:items-start gap-2">
         <p className="desktop:text-[32px] laptop:text-[28px] laptop:text-start text-center  text-[18px] font-[600]">
           Chúng tôi được tin tưởng bởi{" "}
         </p>
@@ -16,7 +16,7 @@ export default function Trust() {
         </p>
       </div>
 
-      <div className="w-full flex flex-col gap-4 laptop:gap-0">
+      <div className="w-max flex flex-col gap-4 laptop:gap-0">
         <h3 className="font-[500] laptop:text-[26px] text-center laptop:text-start">
           KHÁCH HÀNG CỦA EDUCENTER
         </h3>
@@ -26,7 +26,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_1.svg"
-              layout="fill"
+              fill
             />
           </div>
           <div className="relative aspect-square w-[100px]">
@@ -34,7 +34,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_2.svg"
-              layout="fill"
+              fill
             />
           </div>
           <div className="relative aspect-square w-[100px]">
@@ -42,7 +42,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_3.svg"
-              layout="fill"
+              fill
             />
           </div>
           <div className="relative aspect-square w-[100px]">
@@ -50,7 +50,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_4.svg"
-              layout="fill"
+              fill
             />
           </div>
           <div className="relative aspect-square w-[100px]">
@@ -58,7 +58,7 @@ export default function Trust() {
               alt="EduCenter"
               title="EduCenter"
               src="/images/home/trust_5.svg"
-              layout="fill"
+              fill
             />
           </div>
         </div>
