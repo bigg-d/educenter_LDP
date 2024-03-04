@@ -32,11 +32,7 @@ export default function ContactForm() {
             <div className="flex items-center gap-4">
               <div className="rounded-md bg-white transition-all duration-100 hover:outline hover:outline-blue-300 p-2">
                 <div className="relative aspect-square w-[45px]">
-                  <Image
-                    alt="Educenter"
-                    src="/images/home/zalo.svg"
-                    layout="fill"
-                  />
+                  <Image alt="Educenter" src="/images/home/zalo.svg" fill />
                 </div>
               </div>
               <div className="rounded-md bg-white transition-all duration-100 hover:outline hover:outline-blue-300 p-2">
@@ -44,17 +40,13 @@ export default function ContactForm() {
                   <Image
                     alt="Educenter"
                     src="/images/home/messenger.svg"
-                    layout="fill"
+                    fill
                   />
                 </div>
               </div>
               <div className="rounded-md bg-white transition-all duration-100 hover:outline hover:outline-blue-300 p-2">
                 <div className="relative aspect-square w-[45px]">
-                  <Image
-                    alt="Educenter"
-                    src="/images/home/telegram.svg"
-                    layout="fill"
-                  />
+                  <Image alt="Educenter" src="/images/home/telegram.svg" fill />
                 </div>
               </div>
             </div>

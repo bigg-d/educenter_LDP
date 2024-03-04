@@ -322,7 +322,7 @@ export default function Feedback(): ReactNode {
       },
     ];
     return laptop ? tabletData.concat(concatData) : tabletData;
-  }, []);
+  }, [laptop]);
   return (
     <div className="flex flex-col gap-4  desktop:gap-24 w-[90%] mx-auto tablet:w-full">
       <div className=" text-center my-4 tablet:my-8 laptop:my-12 desktop:my-12 font-[500] desktop:text-sb36 text-sb22">
