@@ -35,7 +35,7 @@ export default function ContactForm() {
                   <Image
                     alt="Educenter"
                     src="/images/home/zalo.svg"
-                    layout="fill"
+                    fill
                   />
                 </div>
               </div>
@@ -44,7 +44,7 @@ export default function ContactForm() {
                   <Image
                     alt="Educenter"
                     src="/images/home/messenger.svg"
-                    layout="fill"
+                    fill
                   />
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function ContactForm() {
                   <Image
                     alt="Educenter"
                     src="/images/home/telegram.svg"
-                    layout="fill"
+                    fill
                   />
                 </div>
               </div>

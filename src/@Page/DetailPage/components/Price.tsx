@@ -6,6 +6,7 @@ const Price = () => {
     {
       name: "Cơ bản",
       price: "10 Tr",
+      detail:"Phù hợp với doanh nghiệp 1-10 người",
       feature: [
         "Cung cấp bài kiểm tra",
         "Không giới hạn sản phẩm thiết kế",
@@ -19,6 +20,7 @@ const Price = () => {
       isPopular: true,
       name: "Cơ bản",
       price: "20 Tr",
+      detail: "Phù hợp với doanh nghiệp 10-50 người",
       feature: [
         "Cung cấp bài kiểm tra",
         "Không giới hạn sản phẩm thiết kế",
@@ -31,6 +33,7 @@ const Price = () => {
     {
       name: "Nâng cao",
       price: "Liên hệ",
+      detail: "Phù hợp với doanh nghiệp trên 100 người",
       feature: [
         "Cung cấp bài kiểm tra",
         "Không giới hạn sản phẩm thiết kế",
@@ -46,23 +49,23 @@ const Price = () => {
       <h2 className=" text-center text-sb18 desktop:text-[2.5rem] tablet:text-sb28 mb-[2.5rem] desktop:mb-[13.125rem] tablet:mb-[3.75rem]">
         Báo giá sản phẩm
       </h2>
-      <div className="flex desktop:justify-between flex-wrap gap-[1.875rem] desktop:[&>*]:-mx-10 desktop:[&>*]:px-20 rounded-[2.25rem] desktop:bg-white">
+      <div className="flex tablet:justify-between flex-wrap gap-[1.875rem] desktop:[&>*]:-mx-10 desktop:[&>*]:px-20 rounded-[2.25rem] desktop:bg-white">
         {options.map((option: any, index) => {
           return (
             <div
               key={index}
               className={clsx(
-                "desktop:w-1/3 h-max p-[1.25rem] desktop:p-[3rem] rounded-[2.25rem] flex flex-col justify-center",
+                " desktop:w-1/3 h-max p-[1.25rem] desktop:p-[3rem] rounded-[2.25rem] flex flex-col justify-center",
                 {
                   "desktop:-mt-[10rem] tablet:p-[2rem] bg-mainGradient text-white order-1 desktop:order-2 w-full shadow-lg": index == 1,
-                  "text-[#848199] order-2 bg-white tablet:px-[1.75rem] tablet:py-[2.25rem] tablet:w-[47%]": index !== 1,
+                  "text-[#848199] order-2 bg-white tablet:px-[1.75rem] tablet:py-[2.25rem] w-full tablet:w-[47%]": index !== 1,
                   "order-3": index == 2,
                 }
               )}
             >
               <div className="grid desktop:grid-cols-1 tablet:grid-cols-3 text-center ">
                 {index == 1 ? (
-                  <div className="m-auto shadow-md desktop:w-1/2 col-span-1 text-sb12 tablet:text-sb14 bg-[#D23CFF] px-5 py-[0.625rem] mb-[1.25rem] desktop:mb-[3rem] tablet:mb-[2.5rem] rounded-3xl">
+                  <div className="desktop:m-auto shadow-md w-1/2 tablet:w-4/5 desktop:w-1/2 col-span-1 text-sb12 tablet:text-sb14 bg-[#D23CFF] px-5 py-[0.625rem] mb-[1.25rem] desktop:mb-[3rem] tablet:mb-[2.5rem] rounded-3xl">
                     MOST POPULAR
                   </div>
                 ) : (
@@ -71,8 +74,8 @@ const Price = () => {
                 <div className="desktop:col-span-1 tablet:col-span-3 desktop:block flex justify-between desktop:mb-0 tablet:mb-3">
                   <h2
                     className={clsx("desktop:mb-[2rem] text-black ", {
-                      "text-white tablet:text-sb28": index == 1,
-                      "desktop:text-sb28 tablet:text-sb22": index !== 1,
+                      "text-white text-sb18 tablet:text-sb28": index == 1,
+                      "desktop:text-sb28 text-sb18 tablet:text-sb22": index !== 1,
                     })}
                   >
                     {option?.name}
@@ -95,8 +98,8 @@ const Price = () => {
                   </p>
                 </div>
 
-                <p className="text-m18 mb-[2.5rem] desktop:col-span-1 tablet:col-span-3 desktop:text-center tablet:text-left">
-                  Phù hợp với doanh nghiệp 1-10 người
+                <p className="text-m14 desktop:text-m18 mb-[2.5rem] desktop:col-span-1 tablet:col-span-3 desktop:text-center text-left">
+                  {option?.detail}
                 </p>
               </div>
               <ul className={clsx("desktop:mb-[3.5rem] tablet:mb-[2.5rem] flex flex-col flex-wrap desktop:h-full ",{"tablet:h-[8.25rem]":index ==1})}>

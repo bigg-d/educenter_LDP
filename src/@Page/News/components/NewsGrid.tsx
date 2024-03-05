@@ -5,7 +5,7 @@ export default async function NewsGrid() {
   //GET DATA BY API HERE
   const data = [
     {
-      title: "Bài viết mới nhất",
+      title: "Bài viết liên quan",
       viewMoreLink: "/",
       posts: [
         {

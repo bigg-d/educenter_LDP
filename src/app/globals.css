@@ -63,6 +63,12 @@
     @apply font-medium;
     @apply leading-[1.25rem];
   }
+  .text-sb14 {
+    @apply text-[0.875rem];
+    @apply not-italic;
+    @apply font-semibold;
+    @apply leading-[1.25rem];
+  }
   .text-m16 {
     @apply text-[1rem];
     @apply not-italic;

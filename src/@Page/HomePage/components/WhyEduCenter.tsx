@@ -48,7 +48,7 @@ export default function WhyEduCenter() {
                 src="/images/home/why_ico.svg"
                 alt="EduCenter"
                 title="EduCenter"
-                layout="fill"
+                fill
               />
             </div>
             <p className="text-[1.25rem] absolute font-[400] p-8 bottom-0 w-full">
