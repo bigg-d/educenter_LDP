@@ -1,15 +1,7 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
-
 const Comment = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      };
   const listImage = [
     { image: "/image/logo1.svg" },
     { image: "/image/logo2.svg" },
@@ -25,6 +17,13 @@ const Comment = () => {
     { image: "/image/logo12.svg" },
     // {image:"/image/logo13.svg"},
   ];
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   const listFrame = [
     {
       image: "/image/avt.svg",
@@ -47,15 +46,8 @@ const Comment = () => {
       value:
         "Chúng tôi khuyến nghị các doanh nghiệp đang tìm kiếm các khóa học trực tuyến chất lượng cao cho đội ngũ nhân viên của mình nên lựa chọn Educenter.",
     },
-    {
-        image: "/image/avt.svg",
-        name: "Theresa Webb",
-        text: "Chúng tôi đánh giá Educenter là một nền tảng giáo dục trực tuyến uy tín, chất lượng cao, phù hợp với nhu cầu của doanh nghiệp.",
-        value:
-          "Chúng tôi khuyến nghị các doanh nghiệp đang tìm kiếm các khóa học trực tuyến chất lượng cao cho đội ngũ nhân viên của mình nên lựa chọn Educenter.",
-      },
   ];
-  
+
   return (
     <div className="w-full h-auto bg-blue-50 py-10 flex flex-col gap-[7rem]">
       <div className="flex w-[80%] mx-auto justify-between">
@@ -78,23 +70,33 @@ const Comment = () => {
           ))}
         </div>
       </div>
-      <div className="w-[80%] mx-auto flex">
-        {listFrame.map((pro, index)=> (
-            <Slider {...settings}>
-                <div key={index} className="p-[3rem] w-[45%] border-8 border-solid border-blue-300 flex-col justify-start items-start gap-9 inline-flex rounded-[2.6rem]">
-                    <img src="/image/img_mark.png" alt="" />
-                    <div className="self-stretch justify-start items-center gap-5 inline-flex">
-                        <img src={pro.image} alt="" />
-                        <span className="grow shrink basis-0 text-zinc-600 text-xl font-bold font-['Montserrat']">{pro.name}</span>
-                    </div>
-                    <div className="self-stretch  flex-col justify-start items-start gap-5 flex">
-                        <span className="self-stretch text-zinc-900 text-lg font-medium font-['Montserrat']">{pro.text}</span>
-                        <span className="self-stretch text-zinc-900 text-lg font-medium font-['Montserrat']">{pro.value}</span>
-                    </div>
-                </div>  
-            </Slider>
-            
-        ))}
+      <div className="w-full flex justify-end">
+        <div className="w-[90%]  mr-[0px] flex ">
+          <Slider {...sliderSettings} className="w-full mx-auto flex">
+            {listFrame.map((pro, index) => (
+              <div
+                key={index}
+                className="p-[3rem] w-[45%] divSlide border-8 border-solid border-blue-300 flex-col justify-start items-start gap-9 inline-flex rounded-[2.6rem]"
+              >
+                <img src="/image/img_mark.png" alt="" />
+                <div className="self-stretch justify-start items-center gap-5 inline-flex">
+                  <img src={pro.image} alt="" />
+                  <span className="grow shrink basis-0 text-zinc-600 text-xl font-bold font-['Montserrat']">
+                    {pro.name}
+                  </span>
+                </div>
+                <div className="self-stretch  flex-col justify-start items-start gap-5 flex">
+                  <span className="self-stretch text-zinc-900 text-lg font-medium font-['Montserrat']">
+                    {pro.text}
+                  </span>
+                  <span className="self-stretch text-zinc-900 text-lg font-medium font-['Montserrat']">
+                    {pro.value}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );

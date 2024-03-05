@@ -8,8 +8,8 @@ import Comment from './component/Comment'
 const IntroduceLayout = () => {
   return (
     <>
-        {/* <Banner/>
-        <Mission/> */}
+        <Banner/>
+        <Mission/>
         <Vision/>
         <WorkCulture/>
         <Result/>
