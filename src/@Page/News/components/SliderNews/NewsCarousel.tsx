@@ -5,8 +5,14 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 import Slider from "react-slick";
+import { CarouselPostDto } from "../../new.entities";
+import Link from "next/link";
 
-export default function NewCarousel() {
+interface Props {
+  list: CarouselPostDto[];
+}
+export default function NewCarousel(props: Props) {
+  const { list } = props;
   const data = [
     {
       image: "",
@@ -48,7 +54,7 @@ export default function NewCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const settings = {
     dots: false,
-
+    autoplaySpeed: 3000,
     infinite: true,
     speed: 1000,
     autoPlay: true,
@@ -65,12 +71,17 @@ export default function NewCarousel() {
   const { laptop } = useBreakpoints();
 
   return (
-    <div className="slider-container">
+    <div className="slider-container" id="phong-carousel">
       <Slider {...settings}>
-        {data.map((item, index) => (
+        {list.map((item, index) => (
           <div key={item.title} className="relative  ">
             <div className="aspect-[1.604/1] w-full relative laptop:w-[70%]">
-              <Image src="/images/news/new_ex.svg" title="1" alt="1" fill />
+              <Image
+                src={item.featuredImage.node.sourceUrl}
+                title={item.title}
+                alt={item.title}
+                fill
+              />
             </div>
             <div
               className={clsx(
@@ -83,21 +94,27 @@ export default function NewCarousel() {
             >
               <div className=" flex flex-col gap-4 p-8">
                 <div className="flex flex-wrap items-center gap-2 ">
-                  {item.tag.map((tag) => (
+                  {/* {item.tag.map((tag) => (
                     <div
                       className="rounded-[2rem] bg-[#F6F9FF] px-6 py-2 uppercase font-[400]"
                       key={tag}
                     >
                       {tag}
                     </div>
-                  ))}
+                  ))} */}
                 </div>
 
                 <h3 className="text-sb22">{item.title}</h3>
-                <p className="text-m14 text-[#787A8C] line-clamp-3">
+                {/* <p className="text-m14 text-[#787A8C] line-clamp-3">
                   {item.description}
-                </p>
-                <button className="btn-gradient w-max">Đọc thêm</button>
+                </p> */}
+                <div
+                  className="text-m14 laptop:text-m18 laptop:text-[#787A8C]  text-[#787A8C] line-clamp-3"
+                  dangerouslySetInnerHTML={{ __html: item.excerpt }}
+                />
+                <button className="btn-gradient w-max">
+                  <Link href={`/tin-tuc/${item.slug}`}>Đọc thêm</Link>
+                </button>
               </div>
             </div>
           </div>

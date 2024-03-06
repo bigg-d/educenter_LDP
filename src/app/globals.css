@@ -139,4 +139,20 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  @media screen and (min-width: 1200px) {
+    #phong-carousel.slider-container .slick-slider .slick-prev::before {
+      font-size: 3rem;
+    }
+    #phong-carousel.slider-container .slick-slider .slick-next::before {
+      font-size: 3rem;
+    }
+
+    #phong-carousel.slider-container .slick-slider .slick-prev {
+      left: -40px;
+    }
+    #phong-carousel.slider-container .slick-slider .slick-next {
+      right: -20px;
+    }
+  }
 }
