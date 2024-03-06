@@ -23,7 +23,6 @@ const Comment = () => {
     speed: 500,
     slidesToShow: 2.5,
     slidesToScroll: 1,
-    centerMode: true, // Thiết lập centerMode thành true
   };
   const listFrame = [
     {

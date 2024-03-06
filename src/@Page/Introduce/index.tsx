@@ -9,10 +9,10 @@ const IntroduceLayout = () => {
   return (
     <>
         <Banner/>
-        <Mission/>
+        {/* <Mission/>
         <Vision/>
         <WorkCulture/>
-        <Result/>
+        <Result/> */}
         <Comment/>
     </>
   )

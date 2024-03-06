@@ -72,7 +72,14 @@ const Banner = () => {
   const handleYearChange = (index) => {
     setSelectedYear(frameList[index].year);
   };
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 0,
+    autoplay: false,
+    // autoplaySpeed: 2000
+  };
   return (
     <div className="w-full flex flex-col items-center bg-white">
       <div className="w-[90%] mt-10 md:w-[85%] gap-5 flex flex-col">
@@ -95,17 +102,17 @@ const Banner = () => {
             <Slider
               asNavFor={nav1}
               ref={(slider) => (sliderRef2 = slider)}
-              slidesToShow={5}
               swipeToSlide={true}
               focusOnSelect={true}
               afterChange={handleYearChange} 
-              draggable={false}
+              {...settings}
+              className="stop-slider"
             >
               {frameList.map((item) => (
                 <div
                   key={item.year}
                   className={clsx(
-                    "border-solid border-2 rounded-full w-[10%]",
+                    "border-solid border-2 rounded-full w-[10%]  flex justify-center slider-item",
                     {
                       "border-blue-500": item.year === selectedYear, // Thay đổi màu sắc border nếu năm được chọn
                       "border-gray-500": item.year !== selectedYear,
