@@ -4,12 +4,10 @@ import { Stepper, Button } from "@mui/material";
 import clsx from "clsx";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CoreCarousel from "../hook/CoreCarousel";
-import Slider from 'react-slick';
+import Slider from "react-slick";
 const Banner = () => {
-  const pathname = usePathname();
-  const [showAll, setShowAll] = useState(false)
   const { mobile, tablet, laptop, desktop } = useBreakpoints();
   const frameList = [
     {
@@ -59,12 +57,20 @@ const Banner = () => {
       year: "2020",
     },
   ];
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4, // Số lượng phần tử hiển thị trên mỗi slide
-    slidesToScroll: 4// Số lượng phần tử trượt qua mỗi lần trượt
+
+  const [nav1, setNav1] = useState(null);
+  const [nav2, setNav2] = useState(null);
+  let sliderRef1 = useRef(null);
+  let sliderRef2 = useRef(null);
+
+  useEffect(() => {
+    setNav1(sliderRef1);
+    setNav2(sliderRef2);
+  }, []);
+
+  const [selectedYear, setSelectedYear] = useState("");
+  const handleYearChange = (index) => {
+    setSelectedYear(frameList[index].year);
   };
 
   return (
@@ -85,59 +91,56 @@ const Banner = () => {
         </div>
 
         <div className="">
-          <div className="flex flex-col gap-5 ">
-            <div
-              className={clsx("flex gap-2", {
-                "flex justify-between gap-0 ": mobile,
-                "flex gap-5 ": tablet,
-                "mx-auto flex justify-center ": laptop,
-              })}
+          <div className="flex flex-col gap-5  slider-container ">
+            <Slider
+              asNavFor={nav1}
+              ref={(slider) => (sliderRef2 = slider)}
+              slidesToShow={5}
+              swipeToSlide={true}
+              focusOnSelect={true}
+              afterChange={handleYearChange} 
+              draggable={false}
             >
               {frameList.map((item) => (
                 <div
                   key={item.year}
                   className={clsx(
-                    "border-solid border-2 border-blue-500 rounded-full",
+                    "border-solid border-2 rounded-full w-[10%]",
                     {
-                      " border-blue-500 ": item.year == pathname,
-                      "border-gray-500": item.year !== pathname,
+                      "border-blue-500": item.year === selectedYear, // Thay đổi màu sắc border nếu năm được chọn
+                      "border-gray-500": item.year !== selectedYear,
                     }
                   )}
                 >
-                        
-                  <Button className="rounded-full" >
+                  <Button className="rounded-full ">
                     <span className="text-black font-semibold">
                       {item.year}
                     </span>
                   </Button>
                 </div>
               ))}
-            </div>
-            <Slider {...settings} className={clsx("",{
-              "w-full  h-auto flex-col flex gap-5 mt-5 ":mobile,
-              "flex   flex-nowrap gap-4  ":tablet
-            })}>
-              {/* <div className={clsx("",{
-              "w-full  h-auto flex-col flex gap-5 mt-5 ":mobile,
-              "flex   flex-nowrap gap-4  ":tablet
-            })}> */}
-              
-              {frameList.map((item, index) =>
+            </Slider>
+            <Slider className="slide-phong" asNavFor={nav2} ref={slider => (sliderRef1 = slider)} slidesToShow={5}>
+            {frameList.map((item, index) =>
                 item.items?.map((pro, indexPro) => (
-                  <div key={indexPro} className={clsx("",{
-                    "flex flex-col":mobile,
-                    "flex flex-col gap-5  2xl:min-w-[2%] ":tablet 
-                  })} >
-
+                  <div
+                    key={indexPro}
+                    className={clsx("", {
+                      "flex flex-col": mobile,
+                      "flex flex-col gap-5  2xl:min-w-[2%] ": tablet,
+                    })}
+                  >
                     {tablet && (
-                      <div className="bg-gradient-to-r from-[#3E60FE] to-[#D23CFF] text-transparent bg-clip-text  font-semibold">{item.year}</div>
+                      <div className="bg-gradient-to-r from-[#3E60FE] to-[#D23CFF] text-transparent bg-clip-text  font-semibold">
+                        {item.year}
+                      </div>
                     )}
                     <div className="flex gap-5 relative ">
                       <div className="w-5 2xl:w-7 2xl:h-7  h-5 relative z-[1]">
                         <div className="w-2 2xl:w-3 2xl:h-3 h-2 left-[6px] top-[6px] absolute bg-slate-300 rounded-full" />
                         <div className="w-5 h-5 2xl:w-6 2xl:h-6 left-0 top-0 absolute rounded-full border border-slate-300" />
                       </div>
-                      <div className="border absolute border-solid border-gray-400 h-[60%] top-[0.7rem] left-[0.65rem]"/>
+                      <div className="border absolute border-solid border-gray-400 h-[60%] top-[0.7rem] left-[0.65rem]" />
                       <div className="flex flex-col gap-5 ">
                         <div className=" py-0.5 flex-col justify-start items-start gap-2 inline-flex ">
                           <div className=" text-zinc-900 text-xs font-semibold  leading-none">
@@ -153,19 +156,13 @@ const Banner = () => {
                       </div>
                     </div>
                   </div>
-                  
                 ))
               )}
-              
-            {/* </div> */}
             </Slider>
-            
-
           </div>
         </div>
       </div>
     </div>
-    
   );
 };
 

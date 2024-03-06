@@ -11,19 +11,27 @@
   display: flex !important;
   margin-right: 20px !important;
 }
-.slick-dots{
+/* .slick-dots{
   display: none !important;
 }
 .slick-arrow{
   display: none !important;
+} */
+.slide-phong .slick-prev {
+  display: none !important;
 }
+.slide-phong  .slick-next{
+  display: none !important;
+}
+
 .slick-prev::before,
 .slick-next::before {
-    position: absolute;
+    /* position: absolute; */
     color: #60a5fa !important;
-    font-size: 31px !important;
-    left: -5px;
+    /* font-size: 31px !important; */
+    /* left: -5px; */
 }
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

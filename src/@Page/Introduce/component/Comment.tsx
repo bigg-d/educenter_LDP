@@ -21,7 +21,7 @@ const Comment = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2.5,
     slidesToScroll: 1,
   };
   const listFrame = [
