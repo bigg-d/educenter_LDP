@@ -175,11 +175,11 @@ export default async function NewsGrid() {
   ];
 
   return (
-    <div className="flex flex-col gap-4 laptop:gap-8 desktop:gap-12 mx-auto desktop:w-4/5 my-12">
+    <div className="flex flex-col gap-4 laptop:gap-8 desktop:gap-12 mx-auto desktop:w-4/5 my-12 px-4">
       {data.map((section) => (
         <div className="flex flex-col gap-4" key={section.title}>
           <div className="flex items-center justify-between">
-            <h3 className="text-sb28">{section.title}</h3>
+            <h3 className="text-sb16 laptop:text-sb28">{section.title}</h3>
             <Link
               href={section.viewMoreLink}
               className="text-sb16 text-mainBlue"

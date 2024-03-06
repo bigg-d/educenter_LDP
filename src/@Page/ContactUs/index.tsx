@@ -16,23 +16,26 @@ function StaticUI() {
   return (
     <>
       <div className="flex flex-col gap-4 laptop:gap-8 desktop:gap-12 my-6 laptop:my-8 desktop:my-12">
-        <h1 className="text-transparent w-max mx-auto bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text text-sb36">
+        <h1 className="text-transparent text-center laptop:w-max laptop:mx-auto bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text laptop:text-sb28 text-sb22 desktop:text-sb36">
           Liên hệ với chúng tôi
         </h1>
 
-        <p className="text-m18 w-full laptop:w-1/2 text-center mx-auto">
+        <p className="  px-4 text-m16 laptop:text-m18 w-full laptop:w-1/2 text-center laptop:mx-auto">
           Việc liên lạc với EduQuiz chưa bao giờ dễ dàng hơn thế. Gọi cho chúng
           tôi, sử dụng tiện ích trò chuyện trực tiếp hoặc email của chúng tôi và
           chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể!
         </p>
       </div>
 
-      <div className="relative w-full bg-mainGradient aspect-[18/1]">
-        <div className="absolute w-full h-full rounded-bl-[80%] rounded-br-[80%] bg-white">
-          <h3 className="text-sb22 w-max mx-auto">Liên hệ với EduCenter</h3>
+      <div className="relative w-full  aspect-[8/1] laptop:aspect-[18/1]">
+        <div className="absolute w-full  h-[102%] laptop:h-full z-[2] rounded-bl-[80%] rounded-br-[80%] bg-white">
+          <h3 className="text-sb16 laptop:text-sb22 w-max mx-auto ">
+            Liên hệ với EduCenter
+          </h3>
         </div>
+        <div className="  bg-mainGradient absolute w-full h-[105%] top-[1px] z-[1]"></div>
       </div>
-      <div className="grid grid-cols-1 tablet:grid-cols-3 items-center bg-mainGradient p-[5%]">
+      <div className="grid grid-cols-1 gap-4 tablet:grid-cols-3 items-center bg-mainGradient p-[5%]">
         <div className="flex flex-col  gap-8 items-center">
           <p className="text-white text-m18">Số điện thoại</p>
           <p className="text-white text-m22">034231218512</p>
@@ -58,12 +61,17 @@ function StaticUI() {
           </div>
         </div>
         <div className="flex flex-col  gap-8 items-center">
-          <p className="text-white text-m18">Email</p>
-          <p className="text-white text-m22">suport@eduquiz.vn</p>
+          <p className="text-white text-m16 laptop:text-m18 laptop:text-white">
+            Email
+          </p>
+          <p className="text-white text-m18 laptop:text-m22">
+            suport@eduquiz.vn
+          </p>
         </div>
       </div>
-      <div className="relative w-full bg-mainGradient aspect-[18/1]">
-        <div className="absolute w-full h-full rounded-tl-[80%] rounded-tr-[80%] bg-[#F6F9FF]"></div>
+      <div className="relative w-full  aspect-[8/1] laptop:aspect-[18/1]">
+        <div className="absolute w-full  h-[102%] laptop:h-full z-[2] rounded-tl-[80%] rounded-tr-[80%]  bg-[#F6F9FF]"></div>
+        <div className="  bg-mainGradient absolute w-full h-[105%] bottom-[1px] z-[1]"></div>
       </div>
     </>
   );

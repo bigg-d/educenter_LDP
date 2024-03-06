@@ -9,6 +9,7 @@ import { TypeAnimation } from "react-type-animation";
 import Lottie from "lottie-react";
 import robot_animation from "../assets/animation_robot.json";
 import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
+
 export function Content1() {
   return (
     <div className="border-2 rounded-[56px] shadow-sank p-[5%] border-white  relative w-[90%] laptop:w-3/5 animate-fadeIn">
@@ -46,13 +47,13 @@ export function Content1() {
         <div className="flex flex-col gap-[12px] rounded-md p-4 bg-[#5074FF]"></div>
       </div>
 
-      <div className="font-[600] bg-white rounded-2xl p-[0.7rem]  laptop:p-[0.75rem] -right-2  tablet:-right-12 tablet:-top-6 absolute  animate-text-1">
+      <div className="animate-text-1 -right-[10%] tablet:-top-[5%] absolute rounded-2xl text-center  bg-[#3E65FE] text-[white] p-[0.7rem] font-bold border-2">
         Làm trên mọi thiết bị
       </div>
-      <div className="font-[600] bg-white rounded-2xl p-[0.7rem]  laptop:p-[0.75rem] laptop:-left-12 top-[30%] -left-4  absolute text-[#3E65FE] animate-text-2 ">
+      <div className="animate-text-2 -left-[10%] top-[30%]  absolute rounded-2xl text-center  bg-[#10b981] text-[white] p-[0.7rem] font-bold border-2">
         Bất kì thời gian
       </div>
-      <div className="font-[600] bg-white rounded-2xl p-[0.7rem]  laptop:p-[0.75rem]  -right-4 tablet:-right-12 bottom-[20%] absolute text-[#D23CFF] animate-text-3">
+      <div className="animate-text-3 h-max -right-[4%] bottom-[20%]  absolute rounded-2xl text-center  bg-[#D23CFF] text-[white] p-[0.7rem] font-bold border-2">
         Bất kì địa điểm
       </div>
     </div>
@@ -100,11 +101,15 @@ export function Content3() {
           <div className="flex gap-2">
             <div className="w-2/5 flex flex-col">
               <div className="aspect-square w-[33.33px] relative">
+<<<<<<< HEAD
                 <Image
                   src="/images/home/avatar.svg"
                   fill
                   alt="EduCenter"
                 />
+=======
+                <Image src="/images/home/avatar.svg" fill alt="EduCenter" />
+>>>>>>> 13b058cefd6338bceb0870f2d5aa5aaaa2c75014
               </div>
 
               <span className="text-[0.6rem] tablet:text-[1rem] font-500 text-gray-500">
@@ -127,11 +132,15 @@ export function Content3() {
             </div>
 
             <div className="w-3/5 relative aspect-square">
+<<<<<<< HEAD
               <Image
                 src="/images/home/bg_app_3.svg"
                 fill
                 alt="EduCenter"
               />
+=======
+              <Image src="/images/home/bg_app_3.svg" fill alt="EduCenter" />
+>>>>>>> 13b058cefd6338bceb0870f2d5aa5aaaa2c75014
             </div>
           </div>
 
@@ -299,7 +308,7 @@ const sectionLength = services.length;
 export default function Service() {
   const { tablet } = useBreakpoints();
   return (
-    <div className="flex flex-col mx-auto desktop:w-4/5 laptop:w-[90%]">
+    <div className="flex flex-col mx-auto desktop:w-4/5 laptop:w-[90%] my-8 laptop:my-12 desktop:my-24">
       <div className=" items-center hidden laptop:flex ">
         <div className="bg-[#ECEEFF] rounded-[36px] ">
           <h2 className="text-transparent w-max bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text px-8 py-6 text-[2rem]">
@@ -338,7 +347,10 @@ export function ScrollTablet() {
         startHeight < currentHeight && currentHeight < lastHeight
       );
 
-      if (startHeight - 120 < currentHeight && currentHeight < lastHeight) {
+      if (
+        startHeight - 120 < currentHeight &&
+        currentHeight < lastHeight + 1000
+      ) {
         setShowAnimate(true);
         ["3", "2", "1", "0"].forEach((id, index) => {
           const e = document.getElementById(id) as any;
