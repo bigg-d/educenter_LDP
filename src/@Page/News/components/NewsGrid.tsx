@@ -1,176 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getCarouselNew, getSummary } from "../services/blogService";
 
 export default async function NewsGrid() {
-  //GET DATA BY API HERE
+  const [lastestPosts, sumaryPosts] = await Promise.all([
+    getCarouselNew(),
+    getSummary(),
+  ]);
+  console.log("🚀 ~ NewsGrid ~ lastestPosts:", lastestPosts);
+
   const data = [
     {
       title: "Bài viết liên quan",
       viewMoreLink: "/",
-      posts: [
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-      ],
+      posts: lastestPosts,
     },
+
     {
       title: "Bài viết mới nhất",
       viewMoreLink: "/",
-      posts: [
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-      ],
+      posts: lastestPosts,
     },
     {
-      title: "Bài viết mới nhất",
+      title: "Tổng hợp bài viết",
       viewMoreLink: "/",
-      posts: [
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-      ],
-    },
-    {
-      title: "Bài viết mới nhất",
-      viewMoreLink: "/",
-      posts: [
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-        {
-          link: "/",
-          image:
-            "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg",
-          title:
-            "EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên của thương hiệu ‘trẻ’",
-          description:
-            "Bước từng bước vào thị trường giáo dục đang có sự chuyển hóa mạnh mẽ về công nghệ số, EduQuiz đã dần khẳng định được vị thế khi trở thành công cụ ôn thi hiệu quả được rất nhiều bạn sinh viên tin tưởng sử dụng để phục vụ cho việc học tập của",
-        },
-      ],
+      posts: sumaryPosts,
     },
   ];
 
@@ -194,13 +48,24 @@ export default async function NewsGrid() {
                 key={post.title}
                 className="flex flex-col gap-2 rounded-[2rem] overflow-hidden shadow-md border-2 transition-all duration-300 hover:-translate-y-[2px]"
               >
-                <div className="relative aspect-video">
-                  <Image alt="1" title="1" src={post.image} fill />
-                </div>
-                <h4 className="text-sb16 lineClamp2 px-4">{post.title}</h4>
-                <p className="lineClamp3 text-m16  px-4 mb-4 text-[#787A8C]">
-                  {post.description}
-                </p>
+                <Link href={`/tin-tuc/${post.slug}`}>
+                  <div className="relative aspect-video">
+                    <Image
+                      alt={post.title}
+                      title={post.title}
+                      src={post.featuredImage.node.sourceUrl}
+                      fill
+                    />
+                  </div>
+                </Link>
+                <Link href={`/tin-tuc/${post.slug}`}>
+                  <h4 className="text-sb16 lineClamp2 px-4">{post.title}</h4>
+                </Link>
+
+                <div
+                  className="lineClamp3 text-m16  px-4 mb-4 text-[#787A8C]"
+                  dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                ></div>
               </div>
             ))}
           </div>
