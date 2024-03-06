@@ -101,15 +101,7 @@ export function Content3() {
           <div className="flex gap-2">
             <div className="w-2/5 flex flex-col">
               <div className="aspect-square w-[33.33px] relative">
-<<<<<<< HEAD
-                <Image
-                  src="/images/home/avatar.svg"
-                  fill
-                  alt="EduCenter"
-                />
-=======
                 <Image src="/images/home/avatar.svg" fill alt="EduCenter" />
->>>>>>> 13b058cefd6338bceb0870f2d5aa5aaaa2c75014
               </div>
 
               <span className="text-[0.6rem] tablet:text-[1rem] font-500 text-gray-500">
@@ -132,15 +124,7 @@ export function Content3() {
             </div>
 
             <div className="w-3/5 relative aspect-square">
-<<<<<<< HEAD
-              <Image
-                src="/images/home/bg_app_3.svg"
-                fill
-                alt="EduCenter"
-              />
-=======
               <Image src="/images/home/bg_app_3.svg" fill alt="EduCenter" />
->>>>>>> 13b058cefd6338bceb0870f2d5aa5aaaa2c75014
             </div>
           </div>
 

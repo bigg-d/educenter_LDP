@@ -80,11 +80,7 @@ export function BannerImageBox() {
           title="EduCenter"
           alt="Educenter"
           fill
-<<<<<<< HEAD
-          src="/images/home/banner_1.png"
-=======
           src="/images/home/img_1.svg"
->>>>>>> 13b058cefd6338bceb0870f2d5aa5aaaa2c75014
         />
       </div>
       <div className="absolute w-3/5 aspect-[7.6/10] bottom-[5%] right-0 z-[1]">
@@ -92,11 +88,7 @@ export function BannerImageBox() {
           title="EduCenter"
           alt="Educenter"
           fill
-<<<<<<< HEAD
-          src="/images/home/banner_2.png"
-=======
           src="/images/home/img_2.svg"
->>>>>>> 13b058cefd6338bceb0870f2d5aa5aaaa2c75014
         />
       </div>
 
