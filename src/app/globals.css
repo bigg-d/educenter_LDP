@@ -6,6 +6,9 @@
 .slick-slide {
   padding-right: 20px;
 }
+.slick-slide {
+  min-height: 0.3% !important;
+}
 .divSlide {
   /* width: 105% !important; */
   display: flex !important;

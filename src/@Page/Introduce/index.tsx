@@ -9,11 +9,11 @@ const IntroduceLayout = () => {
   return (
     <>
       <Banner />
-      <Mission />
+      {/* <Mission />
       <Vision />
       <WorkCulture />
       <Result />
-      <Comment />
+      <Comment /> */}
     </>
   );
 };
