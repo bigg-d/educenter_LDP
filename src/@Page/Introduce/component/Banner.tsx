@@ -58,8 +58,8 @@ const Banner = () => {
     },
   ];
 
-  const [nav1, setNav1] = useState(null);
-  const [nav2, setNav2] = useState(null);
+  const [nav1, setNav1] = useState<any>(null);
+  const [nav2, setNav2] = useState<any>(null);
   let sliderRef1 = useRef(null);
   let sliderRef2 = useRef(null);
 
@@ -68,16 +68,17 @@ const Banner = () => {
     setNav2(sliderRef2);
   }, []);
 
-  const [selectedYear, setSelectedYear] = useState("");
-  const handleYearChange = (index) => {
-    setSelectedYear(frameList[index].year);
+  const [selectedYear, setSelectedYear] = useState("2024");
+  const handleYearChange = (year: string) => {
+    setSelectedYear(year);
   };
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     slidesToShow: 5,
-    slidesToScroll: 0,
+    slidesToScroll: 1,
     autoplay: false,
+    arrows: false,
     // autoplaySpeed: 2000
   };
   return (
@@ -101,34 +102,37 @@ const Banner = () => {
           <div className="flex flex-col gap-5  slider-container ">
             <Slider
               asNavFor={nav1}
-              ref={(slider) => (sliderRef2 = slider)}
+              ref={(slider: any) => (sliderRef2 = slider)}
               swipeToSlide={true}
               focusOnSelect={true}
-              afterChange={handleYearChange} 
+              // afterChange={handleYearChange}
               {...settings}
-              className="stop-slider"
+              className="mx-auto dektop:w-max my-2"
             >
               {frameList.map((item) => (
                 <div
+                  onClick={() => handleYearChange(item.year)}
                   key={item.year}
                   className={clsx(
-                    "border-solid border-2 rounded-full w-[10%]  flex justify-center slider-item",
+                    "border-solid border rounded-full  px-4 py-2  flex justify-center slider-item cursor-pointer transition-all duration-300 hover:bg-blue-500 hover:text-white",
                     {
-                      "border-blue-500": item.year === selectedYear, // Thay đổi màu sắc border nếu năm được chọn
-                      "border-gray-500": item.year !== selectedYear,
+                      "border-blue-500  font-[600] text-blue-500":
+                        item.year === selectedYear,
+                      "border-gray-500 text-black": item.year !== selectedYear,
                     }
                   )}
                 >
-                  <Button className="rounded-full ">
-                    <span className="text-black font-semibold">
-                      {item.year}
-                    </span>
-                  </Button>
+                  {item.year}
                 </div>
               ))}
             </Slider>
-            <Slider className="slide-phong" asNavFor={nav2} ref={slider => (sliderRef1 = slider)} slidesToShow={5}>
-            {frameList.map((item, index) =>
+            <Slider
+              className="slide-phong"
+              asNavFor={nav2}
+              ref={(slider: any) => (slider ? (sliderRef1 = slider) : null)}
+              slidesToShow={5}
+            >
+              {frameList.map((item, index) =>
                 item.items?.map((pro, indexPro) => (
                   <div
                     key={indexPro}
