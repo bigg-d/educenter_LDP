@@ -10,17 +10,21 @@ const MainContent = async (props: Props) => {
   const { slug } = props;
 
   const post = await getDetailPost(slug);
-  // console.log("🚀 ~ MainContent ~ post:", post);
+  console.log(post);
+  
   return (
     <div className="relative z-10  desktop:bg-[#FAFAFA]">
-      <div className="hidden desktop:block w-full absolute top-0 aspect-[192/41]">
+      <div className="hidden laptop:block w-full absolute top-0 aspect-[192/41]">
         <Image src="/images/detailNews/newsDetailBg.svg" alt="Educenter" fill />
       </div>
-      <div className="relative z-10 w-ful px-[1.25rem] desktop:px-[17%] tablet:px-[1.75rem] pt-[1.5rem] tablet:pt-[2.5rem] desktop:mb-[2.5rem] desktop:pb-0 tablet:pb-[1.875rem] pb-[1.75rem]">
-        <p className="text-mainBlue desktop:text-m14 tablet:text-sb12 desktop:text-white desktop:mb-[2.75rem] tablet:mb-[1.5rem] mb-[1.25rem]">
-          bread crumps
-        </p>
-        <div className="desktop:bg-white desktop:px-[4.5rem] desktop:py-[3.75rem] rounded-[2rem] laptop:shadow-lg">
+      <div className="relative z-10 w-ful px-[1.25rem] desktop:px-[17%] laptop:px-[6%] tablet:px-[1.75rem] pt-[1.5rem] tablet:pt-[2.5rem] desktop:mb-[2.5rem] desktop:pb-0 tablet:pb-[1.875rem] pb-[1.75rem]">
+        <div className="flex text-mainBlue desktop:text-m14 tablet:text-sb12 desktop:text-white desktop:mb-[2.75rem] tablet:mb-[1.5rem] mb-[1.25rem]">
+          <p>Trang chủ / </p>
+          {post?.categories?.nodes?.map((category) =>(
+            <p key={category?.id}>{category?.name}</p>
+          ))}
+        </div>
+        <div className="desktop:bg-white desktop:px-[4.5rem] laptop:px-[4.5rem] desktop:py-[3.75rem] rounded-[2rem] laptop:shadow-lg">
           <h2 className="desktop:text-sb36 tablet:text-sb28 text-sb18 desktop:mb-[2.125rem] tablet:mb-[1.5rem] mb-[1.25rem]">
             {post?.title}
           </h2>

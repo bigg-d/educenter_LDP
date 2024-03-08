@@ -24,6 +24,12 @@ export interface DetailNewsDto extends PostProps {
   featuredImage: FeatureImageProps;
   content: string;
   date: any;
+    tags :{
+      nodes: {
+        name:string;
+        slug:any;
+      }
+    }
   modified: any;
   author: {
     node: {
@@ -31,4 +37,10 @@ export interface DetailNewsDto extends PostProps {
       databaseId: number
     };
   };
+  categories: {
+    nodes: [{
+      id:number;
+      name: string;
+    }]
+  }
 }

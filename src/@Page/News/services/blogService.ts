@@ -114,6 +114,12 @@ export async function getDetailPost(slug: string) {
                 sourceUrl
             }
             }
+            categories {
+              nodes {
+                id
+                name
+              }
+            }
         }
 
         }
