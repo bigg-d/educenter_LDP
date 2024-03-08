@@ -7,7 +7,6 @@ export default async function NewsGrid() {
     getCarouselNew(),
     getSummary(),
   ]);
-  console.log("🚀 ~ NewsGrid ~ lastestPosts:", lastestPosts);
 
   const data = [
     {

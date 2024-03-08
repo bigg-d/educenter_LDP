@@ -1,3 +1,5 @@
+
+
 export interface FeatureImageProps {
   node: {
     id: string;
@@ -26,6 +28,7 @@ export interface DetailNewsDto extends PostProps {
   author: {
     node: {
       name: string;
+      databaseId: number
     };
   };
 }

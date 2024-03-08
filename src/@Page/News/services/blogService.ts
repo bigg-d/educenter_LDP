@@ -19,7 +19,7 @@ async function fetchAPI(query: string = "", { variables }: any = {}) {
       query,
       variables,
     }),
-    // next: { revalidate: 3600 },
+    next: { revalidate: 3600 },
   });
 
   const json = await res.json();
@@ -104,9 +104,10 @@ export async function getDetailPost(slug: string) {
             date
             modified
             author {
-            node {
+              node {
                 name
-            }
+                databaseId
+              }
             }
             featuredImage {
             node {
@@ -114,9 +115,41 @@ export async function getDetailPost(slug: string) {
             }
             }
         }
-        
+
         }
   `);
 
   return data.post as DetailNewsDto;
+}
+
+
+export async function getRelatedPost(authorDbId: number) {
+  console.log(authorDbId)
+  const data = await fetchAPI(`
+      query GetRelatedPost {
+        posts(first: 3, where: {author: ${authorDbId}, orderby: {field: DATE, order: DESC}}) {
+          nodes {
+            featuredImage {
+              node {
+                id
+                sourceUrl
+                slug
+              }
+            }
+            id
+            slug
+            link
+            title
+            excerpt
+            tags {
+              nodes {
+                name
+              }
+            }
+          }
+        }
+      }
+  `);
+
+    return data.posts.nodes as CarouselPostDto[];
 }

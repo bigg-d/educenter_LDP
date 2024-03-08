@@ -9,39 +9,39 @@ const Solution = () => {
     {
       title: "Cập nhật nội dung đào tạo và phương pháp giảng dạy",
       icon: (
-        <SchoolIcon className="w-[4.25rem] h-[4.375rem] bg-[#F5F5F5] p-[1rem] rounded-[1.5rem] mb-[2.5rem] text-green-400" />
+        <Image src="/image/DetailPage/multipleLayer.svg" alt="icon" fill />
       ),
     },
     {
       title:
         "Nhân viên được khuyến khích đưa ra ý tưởng mới, thử nghiệm và thất bại",
       icon: (
-        <SchoolIcon className="w-[4.25rem] h-[4.375rem] bg-[#F5F5F5] p-[1rem] rounded-[1.5rem] mb-[2.5rem] text-red-400" />
+        <Image src="/image/DetailPage/eduIcon.svg" alt="icon" fill />
       ),
     },
     {
       title: "Cá nhân hóa học tập có thể giúp học viên học tập hiệu quả hơn",
       icon: (
-        <HiBriefcase className="w-[4.25rem] h-[4.375rem] bg-[#F5F5F5] p-[1rem] rounded-[1.5rem] mb-[2.5rem] text-green-400" />
+        <Image src="/image/DetailPage/briefCaseIcon.svg" alt="icon" fill />
       ),
     },
     {
       title: "Phương pháp giảng dạy trực tuyến được áp dụng",
       icon: (
-        <SchoolIcon className="w-[4.25rem] h-[4.375rem] bg-[#F5F5F5] p-[1rem] rounded-[1.5rem] mb-[2.5rem] text-purple-400" />
+        <Image src="/image/DetailPage/appIcon.svg" alt="icon" fill />
       ),
     },
     {
       title:
         "Các tài nguyên học tập đa dạng, chẳng hạn như video, bài giảng, bài tập",
       icon: (
-        <HiMiniCpuChip className="w-[4.25rem] h-[4.375rem] bg-[#F5F5F5] p-[1rem] rounded-[1.5rem] mb-[2.5rem] text-[#6ecbd2]" />
+        <Image src="/image/DetailPage/cpuIcon.svg" alt="icon" fill />
       ),
     },
     {
       title: "Hệ thống đánh giá học tập được hỗ trợ bởi công nghệ",
       icon: (
-        <SchoolIcon className="w-[4.25rem] h-[4.375rem] bg-[#F5F5F5] p-[1rem] rounded-[1.5rem] mb-[2.5rem] text-green-400" />
+        <Image src="/image/DetailPage/multipleLayer.svg" alt="icon" fill />
       ),
     },
   ];
@@ -68,10 +68,12 @@ const Solution = () => {
         Giải pháp của chúng tôi
       </h2>
       <ul className="relative grid desktop:grid-cols-3 tablet:grid-cols-2 gap-[1.25rem] desktop:gap-[2.5rem] tablet:gap-[1.75rem]">
-        {solutions.map((solution) => {
+        {solutions.map((solution,index) => {
           return (
-            <li className="bg-white p-6 tablet:p-7 rounded-[1.75rem]">
-              {solution.icon}
+            <li key={index} className="bg-white p-6 tablet:p-7 rounded-[1.75rem]">
+              <div className="relative w-[4.25rem] h-[4.375rem] aspect-square mb-[2.5rem]">
+                {solution?.icon}
+              </div>
               <h3 className="text-sb16 tablet:text-sb18">{solution.title}</h3>
             </li>
           );

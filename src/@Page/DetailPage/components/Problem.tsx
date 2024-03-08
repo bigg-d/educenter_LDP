@@ -39,9 +39,9 @@ const Problem = () => {
         </div>
       </div>
       <div className="w-full desktop:w-1/2 tablet:order-3 mt-[2rem] tablet:mt-[3.75rem] desktop:mt-0">
-        {issues?.map((issue) => {
+        {issues?.map((issue,index) => {
           return (
-            <div className="mb-6">
+            <div key={index} className="mb-6">
               <h3 className="text-sb16 desktop:text-sb22 tablet:text-sb18 desktop:mb-3 tablet:mb-2">
                 {issue?.title}
               </h3>
