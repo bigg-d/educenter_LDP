@@ -3,12 +3,7 @@ import Link from "next/link";
 import { getRelatedPost } from "@/@Page/News/services/blogService";
 
 const RelatedPosts = async (props:any) =>{
-  // console.log("props", props)
   const relatedPost =await  getRelatedPost(props?.authorId)
-  console.log(relatedPost);
-  
-  
-  
     return (
         <div className="bg-white desktop:px-[4.5rem] desktop:py-[3.75rem] desktop:mb-[2.5rem] rounded-[2rem] laptop:shadow-lg">
         <div className="flex flex-col gap-4">
