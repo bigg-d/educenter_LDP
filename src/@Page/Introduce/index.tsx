@@ -12,8 +12,8 @@ const IntroduceLayout = () => {
       {/* <Mission />
       <Vision />
       <WorkCulture />
-      <Result />
-      <Comment /> */}
+      <Result /> */}
+      <Comment />
     </>
   );
 };

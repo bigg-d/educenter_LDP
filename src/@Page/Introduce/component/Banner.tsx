@@ -99,7 +99,7 @@ const Banner = () => {
         </div>
 
         <div className="">
-          <div className="flex dektop:w-full  flex-col gap-5  slider-container ">
+          <div className="flex 2xl:w-full  flex-col gap-5  slider-container ">
             <Slider
               asNavFor={nav1}
               ref={(slider: any) => (sliderRef2 = slider)}
@@ -108,7 +108,7 @@ const Banner = () => {
               // afterChange={handleYearChange}
               {...settings}
               className={clsx(" ", {
-                " 2xl:mx-auto  ml-[10%] w-max my-2 ": tablet,
+                " 2xl:mx-auto   ml-[10%] w-max  my-2 ": tablet,
                 "  mx-auto w-max": mobile,
               })}
             >
@@ -117,7 +117,7 @@ const Banner = () => {
                   onClick={() => handleYearChange(item.year)}
                   key={item.year}
                   className={clsx("", {
-                    "border-solid border rounded-full w-[2%]   px-4 py-2  flex justify-center slider-item cursor-pointer transition-all duration-300 hover:bg-blue-500 hover:text-white":
+                    "border-solid border rounded-full    px-4 py-2  flex justify-center slider-item cursor-pointer transition-all duration-300 hover:bg-blue-500 hover:text-white":
                       tablet,
                     "border-blue-500  font-[600] text-blue-500":
                       item.year === selectedYear,
@@ -130,13 +130,18 @@ const Banner = () => {
                 </div>
               ))}
             </Slider>
-            <div className=" relative flex justify-end ">
-              {tablet && (
-                <div className="border absolute border-solid-5 md:border-gray-200 top-[19%] w-full " />
-              )}
+            <div className=" relative flex md:justify-end overflow-hidden ">
+              <div
+                className={clsx("", {
+                  "border absolute border-solid-5 md:border-gray-200 top-[19%] w-full ":
+                    tablet,
+                  "border absolute border-solid-5 md:border-gray-200 top-[2%] left-[3%] h-[67%] ":
+                    mobile,
+                })}
+              />
               <Slider
                 className={clsx("", {
-                  "slide-phong   w-[100%] right-[-10%]  flex gap-30": tablet,
+                  "slide-phong   w-[100%] right-[-10%]  flex gap-30 ": tablet,
                   "slide-phong   w-[100%]  flex  ": mobile,
                 })}
                 asNavFor={nav2}
@@ -181,10 +186,9 @@ const Banner = () => {
                               <div className="w-2 2xl:w-3 2xl:h-3 h-2 left-[6px] top-[6px] z-[2] absolute bg-slate-300 rounded-full" />
                               <div className="w-5 h-5 2xl:w-6 2xl:h-6 left-0 top-0 absolute z-[2] rounded-full border border-slate-300" />
                             </div>
-                            {/* {mobile && indexPro === item.items.length - 1 && (
-                              <div className="border z-0 absolute border-solid border-gray-200 h-[100%]  md:h-[500%]  md:top-[0.7rem] left-[0.65rem]" />
-                            )} */}
-                            <div className="border z-0 absolute border-solid border-gray-200 h-[500%]  md:top-[0.7rem] left-[0.65rem]" />
+                            {tablet && (
+                              <div className="border z-0 absolute border-solid border-gray-200 h-[500%]  md:top-[0.7rem] left-[0.65rem]" />
+                            )}
                           </div>
                           <div
                             className={clsx("", {
