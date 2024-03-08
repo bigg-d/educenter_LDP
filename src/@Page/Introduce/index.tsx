@@ -9,11 +9,11 @@ import Layout from "../@Layout";
 const IntroduceLayout = () => {
   return (
     <Layout>
-      {/* <Banner/>
-        <Mission/> */}
-      {/* <Vision />
+      <Banner />
+      <Mission />
+      <Vision />
       <WorkCulture />
-      <Result /> */}
+      <Result />
       <Comment />
     </Layout>
   );

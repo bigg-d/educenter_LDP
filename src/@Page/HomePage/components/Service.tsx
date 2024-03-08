@@ -6,10 +6,11 @@ import { useEffect, useState } from "react";
 import { BsImageAlt } from "react-icons/bs";
 import { FaMousePointer, FaSearch } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 import robot_animation from "../assets/animation_robot.json";
 import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
-
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 export function Content1() {
   return (
     <div className="border-2 rounded-[56px] shadow-sank p-[5%] border-white  relative w-[90%] laptop:w-3/5 animate-fadeIn">
@@ -212,7 +213,9 @@ export function Content4() {
       </div>
 
       <div className="bg-white rounded-2xl shadow-2xl w-full laptop:w-4/5 aspect-video">
-        <Lottie animationData={robot_animation} />
+        {typeof document !== "undefined" && (
+          <Lottie animationData={robot_animation} />
+        )}
       </div>
 
       <div className="rounded-[40px] bg-white py-4 px-12 text-[#D23CFF] font-bold w-full laptop:w-4/5 text-center z-[1] shadow-lg">

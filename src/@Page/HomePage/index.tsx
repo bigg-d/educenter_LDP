@@ -11,6 +11,7 @@ import WhyEduCenter from "./components/WhyEduCenter";
 import ResultDevelopment from "./components/ResultDevelopment";
 import ContactForm from "./components/ContactForm";
 import Layout from "../@Layout";
+import Comment from "../Introduce/component/Comment";
 const HomePage = () => {
   // const { tablet, mobile } = useBreakpoints();
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Service />
       <WhyEduCenter />
       <ResultDevelopment />
+      <Comment />
       <ContactForm />
     </Layout>
   );

@@ -2,7 +2,7 @@
 import SchoolIcon from "@mui/icons-material/School";
 import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import clsx from "clsx";
-import Image from "next/image";
+// import Image from "next/image";
 import { Content1 } from "@/@Page/HomePage/components/Service";
 
 const Banner = () => {

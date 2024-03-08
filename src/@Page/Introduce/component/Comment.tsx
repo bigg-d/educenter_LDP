@@ -1,24 +1,11 @@
 "use client";
 import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import clsx from "clsx";
-import React, { useState } from "react";
+import { useState } from "react";
 import Slider from "react-slick";
-
 const Comment = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const { laptop } = useBreakpoints();
-  
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    afterChange: function (currentSlide: number) {
-      setCurrentIndex(currentSlide);
-    },
-    
-  };
+  const { mobile } = useBreakpoints();
+  const [activeIndex, setActiveIndex] = useState(0);
   const listImage = [
     { image: "/image/logo1.svg" },
     { image: "/image/logo2.svg" },
@@ -34,6 +21,43 @@ const Comment = () => {
     { image: "/image/logo12.svg" },
     // {image:"/image/logo13.svg"},
   ];
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 600,
+    autoplaySpeed: 2000,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 2560,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 1536,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
+    beforeChange: function (currentSlide: any, nextSlide: any) {
+      setActiveIndex(nextSlide);
+    },
+  };
   const listFrame = [
     {
       image: "/image/avt.svg",
@@ -57,34 +81,37 @@ const Comment = () => {
         "Chúng tôi khuyến nghị các doanh nghiệp đang tìm kiếm các khóa học trực tuyến chất lượng cao cho đội ngũ nhân viên của mình nên lựa chọn Educenter.",
     },
     {
-        image: "/image/avt.svg",
-        name: "Theresa Webb",
-        text: "Chúng tôi đánh giá Educenter là một nền tảng giáo dục trực tuyến uy tín, chất lượng cao, phù hợp với nhu cầu của doanh nghiệp.",
-        value:
-          "Chúng tôi khuyến nghị các doanh nghiệp đang tìm kiếm các khóa học trực tuyến chất lượng cao cho đội ngũ nhân viên của mình nên lựa chọn Educenter.",
-      },
-      {
-        image: "/image/avt.svg",
-        name: "Theresa Webb",
-        text: "Chúng tôi đánh giá Educenter là một nền tảng giáo dục trực tuyến uy tín, chất lượng cao, phù hợp với nhu cầu của doanh nghiệp.",
-        value:
-          "Chúng tôi khuyến nghị các doanh nghiệp đang tìm kiếm các khóa học trực tuyến chất lượng cao cho đội ngũ nhân viên của mình nên lựa chọn Educenter.",
-      },
+      image: "/image/avt.svg",
+      name: "Theresa Webb",
+      text: "Chúng tôi đánh giá Educenter là một nền tảng giáo dục trực tuyến uy tín, chất lượng cao, phù hợp với nhu cầu của doanh nghiệp.",
+      value:
+        "Chúng tôi khuyến nghị các doanh nghiệp đang tìm kiếm các khóa học trực tuyến chất lượng cao cho đội ngũ nhân viên của mình nên lựa chọn Educenter.",
+    },
+    {
+      image: "/image/avt.svg",
+      name: "Theresa Webb",
+      text: "Chúng tôi đánh giá Educenter là một nền tảng giáo dục trực tuyến uy tín, chất lượng cao, phù hợp với nhu cầu của doanh nghiệp.",
+      value:
+        "Chúng tôi khuyến nghị các doanh nghiệp đang tìm kiếm các khóa học trực tuyến chất lượng cao cho đội ngũ nhân viên của mình nên lựa chọn Educenter.",
+    },
   ];
-  
+
   return (
     <div className="w-full h-auto bg-blue-50 py-10 flex flex-col gap-[7rem]">
-      <div className="flex w-[80%] mx-auto justify-between">
-        <div className=" w-[40%] flex flex-col gap-[3.75rem]">
-          <div className="self-stretch text-zinc-900 text-[4rem] font-bold font-['Montserrat'] leading-[6rem] w-[80%] tracking-wider">
-            <h2>Khách hàng nói gì về Educenter ?</h2>
+      <div className="flex w-[80%] tablet:w-[90%] desktop:w-4/5 mx-auto justify-between">
+        <div className="w-0 hidden tablet:flex tablet:w-[40%]  flex-col gap-[3.75rem]">
+          <div className="self-stretch text-zinc-900 text-[4rem] font-bold  leading-[6rem] w-[80%] tracking-wider">
+            <h2 className="text-sb22 desktop:text-sb36">
+              Khách hàng nói gì về Educenter ?
+            </h2>
           </div>
           <div className="px-8 py-4 bg-blue-500 rounded-full justify-center items-center gap-1 inline-flex w-[60%]">
-            <div className="text-center text-white text-xl font-bold font-['Montserrat'] leading-normal tracking-tight">
+            <div className="text-center text-white text-xl font-bold  leading-normal tracking-tight">
               Chứng thực từ khách hàng
             </div>
           </div>
         </div>
+
         <div className="grid grid-cols-4 grid-rows-3">
           {listImage.map((item, index) => (
             // <div key={index} className={`flex justify-center items-center ${index < 4 || index > 7 ? 'filter blur-sm' : ''}`}>
@@ -94,27 +121,87 @@ const Comment = () => {
           ))}
         </div>
       </div>
-      <div className="w-[80%] mx-auto flex slider-container relative overflow-x-hidden">
-        <Slider {...settings}>
-          {listFrame.map((pro, index)=> (
-                <div key={index} className="bg-gradient-to-r from-mainBlue to-mainViolet rounded-[2.6rem] p-2">
-                    <div className={clsx("relative p-[3rem] bg-white  flex-col justify-start items-start gap-9 inline-flex rounded-[2.6rem]",{
-                      "":currentIndex === index && laptop
-                    })}>
-                        <img src="/image/img_mark.png" alt="" />
-                        <div className="self-stretch justify-start items-center gap-5 inline-flex">
-                            <img src={pro.image} alt="" />
-                            <span className="grow shrink basis-0 text-zinc-600 text-xl font-bold font-['Montserrat']">{pro.name}</span>
-                        </div>
-                        <div className="self-stretch  flex-col justify-start items-start gap-5 flex">
-                            <span className="self-stretch text-zinc-900 text-lg font-medium font-['Montserrat']">{pro.text}</span>
-                            <span className="self-stretch text-zinc-900 text-lg font-medium font-['Montserrat']">{pro.value}</span>
-                        </div>
-                    </div>  
+      <h2 className="tablet:hidden px-[5%] text-center text-sb22 desktop:text-sb36">
+        Khách hàng nói gì về Educenter ?
+      </h2>
+      <div className="w-full flex flex-col gap-4 tablet:flex-row justify-end">
+        {mobile ? (
+          listFrame.map((pro, index) => (
+            <div
+              key={index}
+              className="p-[3rem] divSlide border-8 border-solid border-blue-300 flex-col justify-start items-start gap-9 inline-flex rounded-[2.6rem]"
+            >
+              <img src="/image/img_mark.png" alt="" />
+              <div className="self-stretch justify-start items-center gap-5 inline-flex">
+                <img src={pro.image} alt="" />
+                <span className="grow shrink basis-0 text-zinc-600 text-xl font-bold ">
+                  {pro.name}
+                </span>
+              </div>
+              <div className="self-stretch  flex-col justify-start items-start gap-5 flex">
+                <span className="self-stretch text-zinc-900 text-lg font-medium ">
+                  {pro.text}
+                </span>
+                <span className="self-stretch text-zinc-900 text-lg font-medium ">
+                  {pro.value}
+                </span>
+              </div>
+            </div>
+          ))
+        ) : (
+          <div className="w-[90%]  mr-[0px] flex ">
+            <Slider {...sliderSettings} className="w-full mx-auto flex">
+              {listFrame.map((pro, index) => (
+                <div key={index} className="p-4">
+                  <div
+                    className={clsx(" rounded-[1rem] p-[4px]", {
+                      "bg-mainGradient": activeIndex === index,
+                      "bg-white": activeIndex !== index,
+                    })}
+                  >
+                    <div className="w-full flex flex-col gap-4 rounded-[1rem] bg-white p-4">
+                      <img src="/image/img_mark.png" alt="" className="w-1/5" />
+                      <div className="self-stretch justify-start items-center gap-5 inline-flex">
+                        <img src={pro.image} alt="" />
+                        <span className="grow shrink basis-0 text-zinc-600 text-xl font-bold ">
+                          {pro.name}
+                        </span>
+                      </div>
+                      <div className="self-stretch  flex-col justify-start items-start gap-5 flex">
+                        <span className="self-stretch text-zinc-900 text-lg font-medium ">
+                          {pro.text}
+                        </span>
+                        <span className="self-stretch text-zinc-900 text-lg font-medium ">
+                          {pro.value}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              
-          ))}
-        </Slider>
+                // <div
+                //   key={index}
+                //   className="p-[3rem] divSlide border-8 border-solid border-blue-300 flex-col justify-start items-start gap-9 inline-flex rounded-[2.6rem]"
+                // >
+                //   <img src="/image/img_mark.png" alt="" />
+                //   <div className="self-stretch justify-start items-center gap-5 inline-flex">
+                //     <img src={pro.image} alt="" />
+                //     <span className="grow shrink basis-0 text-zinc-600 text-xl font-bold ">
+                //       {pro.name}
+                //     </span>
+                //   </div>
+                //   <div className="self-stretch  flex-col justify-start items-start gap-5 flex">
+                //     <span className="self-stretch text-zinc-900 text-lg font-medium ">
+                //       {pro.text}
+                //     </span>
+                //     <span className="self-stretch text-zinc-900 text-lg font-medium ">
+                //       {pro.value}
+                //     </span>
+                //   </div>
+                // </div>
+              ))}
+            </Slider>
+          </div>
+        )}
       </div>
     </div>
   );
