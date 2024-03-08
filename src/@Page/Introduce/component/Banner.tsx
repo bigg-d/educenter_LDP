@@ -89,17 +89,17 @@ const Banner = () => {
             <h1 className="font-bold">Giới Thiệu</h1>
           </div>
         )}
-        <div className="md:w-[80%] md:mx-auto flex flex-col text-[1.7rem] md:text-[2.5rem] lg:text-[3rem]  w-[65%]">
+        <div className="md:w-[80%] w-[80%] md:mx-auto flex flex-col text-[1.7rem] md:text-[2.2rem] desktop:text-[4rem]  desktop:w-[80%]">
           <h2 className="bg-gradient-to-r from-[#3E60FE] to-[#D23CFF] text-transparent bg-clip-text  font-semibold">
             Chúng tôi đã có 10 năm
           </h2>
-          <h2 className="font-semibold md:font-light">
+          <h2 className="font-semibold md:font-light ">
             đồng hành cùng doanh nghiệp
           </h2>
         </div>
 
         <div className="">
-          <div className="flex dektop:w-full  flex-col gap-5  slider-container ">
+          <div className="flex desktop:w-full  flex-col gap-5  slider-container ">
             <Slider
               asNavFor={nav1}
               ref={(slider: any) => (sliderRef2 = slider)}
@@ -107,7 +107,7 @@ const Banner = () => {
               focusOnSelect={true}
               // afterChange={handleYearChange}
               {...settings}
-              className="mx-auto desktop:w-1/3 laptop:w-1/2 w-full"
+              className="desktop:mx-auto  desktop:w-1/3 laptop:w-1/2 w-2/3  tablet:w-2/3 tablet:ml-[10%]"
             >
               {frameList.map((item) => (
                 <div
@@ -128,10 +128,15 @@ const Banner = () => {
                 </div>
               ))}
             </Slider>
-            <div className=" relative flex justify-end ">
-              {tablet && (
-                <div className="border absolute border-solid-5 md:border-gray-200 top-[19%] w-full " />
-              )}
+            <div className=" relative flex justify-end overflow-hidden">
+              <div
+                className={clsx("", {
+                  "border absolute border-solid-5 md:border-gray-200 tablet:top-[21%] desktop:top-[17%] w-full ":
+                    tablet,
+                  "border absolute border-solid-5 md:border-gray-200 left-[9%] top-[2%] h-[67%] ":
+                    mobile,
+                })}
+              />
               <Slider
                 className={clsx("", {
                   "slide-phong   w-[100%] right-[-10%]  flex gap-30": tablet,
@@ -173,22 +178,21 @@ const Banner = () => {
                         </div>
                       )}
                       <div className="flex md:w-[120%] dektop:w-full  flex-wrap relative  ">
-                        <div className="flex gap-5">
+                        <div className="flex desktop:gap-5  gap-4 tablet:gap-0">
                           <div>
                             <div className="w-5 2xl:w-7 2xl:h-7  h-5 relative  ">
                               <div className="w-2 2xl:w-3 2xl:h-3 h-2 left-[6px] top-[6px] z-[2] absolute bg-slate-300 rounded-full" />
                               <div className="w-5 h-5 2xl:w-6 2xl:h-6 left-0 top-0 absolute z-[2] rounded-full border border-slate-300" />
                             </div>
-                            {/* {mobile && indexPro === item.items.length - 1 && (
-                              <div className="border z-0 absolute border-solid border-gray-200 h-[100%]  md:h-[500%]  md:top-[0.7rem] left-[0.65rem]" />
-                            )} */}
-                            <div className="border z-0 absolute border-solid border-gray-200 h-[500%]  md:top-[0.7rem] left-[0.65rem]" />
+                            {tablet && (
+                              <div className="border z-0 absolute border-solid border-gray-200 h-[500%]  md:top-[0.7rem] left-[0.65rem]" />
+                            )}
                           </div>
                           <div
                             className={clsx("", {
-                              " py-9 px-6 flex-col justify-start items-start gap-2 inline-flex ":
+                              " desktop:py-9 desktop:px-6 tablet:py-5 tablet:px-4 flex-col justify-start items-start  gap-2 inline-flex ":
                                 tablet,
-                              "flex flex-col gap-3": mobile,
+                              "flex flex-col gap-3 ": mobile,
                             })}
                           >
                             <div className=" text-zinc-900 text-[1rem]  md:text-xs 2xl:text-lg font-semibold  leading-none">
