@@ -7,7 +7,7 @@ import React from "react";
 const Vision = () => {
   const { mobile, tablet, desktop, laptop } = useBreakpoints();
   return (
-    <div className="w-full bg-blue-50 flex justify-center py-[2.5rem] relative">
+    <div className="w-full bg-blue-50 flex justify-center py-[2.5rem] relative overflow-hidden">
       <div
         className={clsx("flex flex-col items-center", {
           "w-[85%]   gap-[3rem] relative z-[1]": mobile,
@@ -25,11 +25,11 @@ const Vision = () => {
             "gap-4 2xl:gap-10 flex-col text-center w-full": tablet,
           })}
         >
-          <div className="md:flex md:flex-col 2xl:flex-row 2xl:items-center 2xl:justify-center md:gap-5">
+          <div className="md:flex md:flex-col laptop:flex-row laptop:items-center   laptop:justify-center md:gap-5">
             <h2 className="2xl:w-[30%] text-zinc-900 text-[1.5rem] 2xl:text-[4rem] md:text-[2.625rem] font-semibold  leading-[38px] tracking-wide">
               Trở thành
             </h2>
-            <div className="2xl:w-[60%] bg-gradient-to-r from-[#3E60FE] to-[#D23CFF] justify-center flex items-center rounded-tl-full rounded-br-full w-full py-[0.4rem] gap-3">
+            <div className="2xl:w-[60%] laptop:w-[60%] laptop:px-3 bg-gradient-to-r from-[#3E60FE] to-[#D23CFF] justify-center flex items-center rounded-tl-full rounded-br-full w-full py-[0.4rem] gap-3">
               <span className="2xl:text-[4rem] md:text-[2.625rem] md:py-5 text-white text-2xl font-semibold  leading-[1.8rem] tracking-wide">
                 công ty hàng đầu
               </span>
@@ -43,7 +43,7 @@ const Vision = () => {
             <div
               className={clsx("", {
                 "  w-full  mx-auto flex flex-col gap-2 md:gap-6 ": mobile,
-                "w-full  mx-auto flex flex-col 2xl:flex-row gap-6  2xl:items-center 2xl:justify-center":
+                "w-full  mx-auto flex flex-col laptop:flex-row gap-6  laptop:items-center laptop:justify-center":
                   tablet,
               })}
             >
@@ -71,7 +71,7 @@ const Vision = () => {
         {tablet && <img src="/image/Group2right.svg" alt="" />}
         {/* {desktop && <img src="/image/dkright.png" />} */}
       </div>
-      <div className="absolute bottom-0 left-0">
+      <div className="absolute bottom-0 left-0 over">
         {mobile && <img src="/image/Groupleft.svg" alt="" />}
         {tablet && <img src="/image/Group2left.svg" alt="" />}
         {/* {desktop && <img src="/image/dkleft.svg" />} */}

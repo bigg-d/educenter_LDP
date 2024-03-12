@@ -78,7 +78,7 @@ const Banner = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: false,
-    arrows: false,
+    arrows: true,
     // autoplaySpeed: 2000
   };
   return (
@@ -99,41 +99,44 @@ const Banner = () => {
         </div>
 
         <div className="">
-          <div className="flex desktop:w-full  flex-col gap-5  slider-container ">
-            <Slider
-              asNavFor={nav1}
-              ref={(slider: any) => (sliderRef2 = slider)}
-              swipeToSlide={true}
-              focusOnSelect={true}
-              // afterChange={handleYearChange}
-              {...settings}
-              className="desktop:mx-auto  desktop:w-1/3 laptop:w-1/2 w-2/3  tablet:w-2/3 tablet:ml-[10%]"
-            >
-              {frameList.map((item) => (
-                <div
-                  onClick={() => handleYearChange(item.year)}
-                  key={item.year}
-                  className={clsx(
-                    "border-solid font-[600] border-2 !w-max rounded-full p-2  tablet:px-4 tablet:py-2  flex justify-center slider-item cursor-pointer transition-all duration-300 hover:bg-blue-500 hover:text-white",
-                    {
-                      "border-blue-500  text-blue-500":
-                        item.year === selectedYear,
-                      // "border-gray-500 text-black": item.year !== selectedYear,
-                      // "px-2 py-2  border-solid border rounded-full flex justify-center slider-item text-[0.8rem] transition-all duration-300 hover:bg-blue-500 hover:text-white":
-                      //   mobile,
-                    }
-                  )}
-                >
-                  {item.year}
-                </div>
-              ))}
-            </Slider>
-            <div className=" relative flex justify-end overflow-hidden">
+          <div className="flex desktop:w-full  flex-col gap-5 relative  slider-container ">
+            <div>
+              <Slider
+                asNavFor={nav1}
+                ref={(slider: any) => (sliderRef2 = slider)}
+                swipeToSlide={true}
+                focusOnSelect={true}
+                // afterChange={handleYearChange}
+                {...settings}
+                className="desktop:mx-auto desktop:w-1/3 laptop:w-1/2 w-full   slider-arrow tablet:w-2/3 tablet:ml-[10%]"
+              >
+                {frameList.map((item) => (
+                  <div
+                    onClick={() => handleYearChange(item.year)}
+                    key={item.year}
+                    className={clsx(
+                      "border-solid font-[600] border-2 !w-max rounded-full p-2  tablet:px-4 tablet:py-2  flex justify-center slider-item cursor-pointer transition-all duration-300 hover:bg-blue-500 hover:text-white",
+                      {
+                        "border-blue-500  text-blue-500":
+                          item.year === selectedYear,
+                        // "border-gray-500 text-black": item.year !== selectedYear,
+                        // "px-2 py-2  border-solid border rounded-full flex justify-center slider-item text-[0.8rem] transition-all duration-300 hover:bg-blue-500 hover:text-white":
+                        //   mobile,
+                      }
+                    )}
+                  >
+                    {item.year}
+                  </div>
+                ))}
+              </Slider>
+            </div>
+
+            <div className=" relative flex justify-end overflow-hidden desktop:mt-[3%]">
               <div
                 className={clsx("", {
                   "border absolute border-solid-5 md:border-gray-200 tablet:top-[21%] desktop:top-[17%] w-full ":
                     tablet,
-                  "border absolute border-solid-5 md:border-gray-200 left-[9%] top-[2%] h-[67%] ":
+                  "border absolute border-solid-5 md:border-gray-200 left-[3%] top-[2%] h-[67%] ":
                     mobile,
                 })}
               />
