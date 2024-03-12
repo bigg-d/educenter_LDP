@@ -68,15 +68,15 @@ const Comment = () => {
   ];
 
   return (
-    <div className="w-full py-8 md:py-0 h-auto bg-blue-50 2xl:py-10 flex flex-col gap-9 md:gap-[7rem] ">
+    <div className="w-full py-8 md:py-0 h-auto bg-blue-50 laptop:py-10 flex flex-col gap-9 md:gap-[7rem] ">
       <div
         className={clsx("", {
           "flex w-[80%] mx-auto justify-between gap-8 2xl:gap-0": tablet,
           "text-center w-[90%] mx-auto flex flex-col-reverse ": mobile,
         })}
       >
-        <div className="w-full   2xl:w-[40%] flex flex-col 2xl:gap-[3.75rem]  justify-between mt-[10%] 2xl:mt-0">
-          <div className="self-stretch text-zinc-900 text-2xl md:text-[2rem] 2xl:text-[4rem] font-bold font-['Montserrat'] leading-[2rem] 2xl:leading-[6rem] 2xl:w-[80%] tracking-wider">
+        <div className="w-full   2xl:w-[40%] flex flex-col 2xl:gap-[3.75rem]  laptop:w-[30%] justify-between mt-[10%] laptop:mt-0">
+          <div className="self-stretch text-zinc-900 text-2xl md:text-[2rem] 2xl:text-[4rem] font-bold font-['Montserrat'] laptop:text-[2.5rem] laptop:leading-[4rem] leading-[2rem] 2xl:leading-[6rem] 2xl:w-[80%] tracking-wider">
             <h2>Khách hàng nói gì về Educenter ?</h2>
           </div>
           {tablet && (
@@ -87,14 +87,17 @@ const Comment = () => {
             </div>
           )}
         </div>
-        <div className="grid 2xl:grid-cols-4  grid-rows-3 grid-cols-3 gap-8 md:gap-3 2xl:gap-10 h-full">
+        <div className="grid 2xl:grid-cols-4  grid-rows-3 grid-cols-3 gap-8 md:gap-3 2xl:gap-10 laptop:gap-3 h-full">
           {listImage.map((item, index) => (
-            // <div key={index} className={`flex justify-center items-center ${index < 4 || index > 7 ? 'filter blur-sm' : ''}`}>
             <div
               key={index}
               className="flex  w-full   2xl:w-full justify-center items-center"
             >
-              <img src={item.image} alt="" className="w-[70%] 2xl:w-[50%]" />
+              <img
+                src={item.image}
+                alt=""
+                className="w-[70%] 2xl:w-[50%] laptop:w-[40%]"
+              />
             </div>
           ))}
         </div>
