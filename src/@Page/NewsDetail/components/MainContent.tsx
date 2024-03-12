@@ -1,3 +1,6 @@
+import { FaRegCalendar } from "react-icons/fa";
+import { PiShareFatLight } from "react-icons/pi";
+import { MdStarRate } from "react-icons/md";
 import Image from "next/image";
 import RelatedPost from "./RelatedPosts";
 import { getDetailPost } from "@/@Page/News/services/blogService";
@@ -18,53 +21,66 @@ const MainContent = async (props: Props) => {
         <Image src="/images/detailNews/newsDetailBg.svg" alt="Educenter" fill />
       </div>
       <div className="relative z-10 w-ful px-[1.25rem] desktop:px-[17%] laptop:px-[6%] tablet:px-[1.75rem] pt-[1.5rem] tablet:pt-[2.5rem] desktop:mb-[2.5rem] desktop:pb-0 tablet:pb-[1.875rem] pb-[1.75rem]">
-        <div className="flex text-mainBlue desktop:text-m14 tablet:text-sb12 desktop:text-white desktop:mb-[2.75rem] tablet:mb-[1.5rem] mb-[1.25rem]">
+        <div className="flex justify-center desktop:text-left laptop:text-center text-mainBlue desktop:text-m14 tablet:text-sb12 laptop:text-white desktop:mb-[2.75rem] tablet:mb-[1.5rem] mb-[1.25rem]">
           <p>Trang chủ / </p>
           {post?.categories?.nodes?.map((category) =>(
             <p key={category?.id}>{category?.name}</p>
           ))}
         </div>
-        <div className="desktop:bg-white desktop:px-[4.5rem] laptop:px-[4.5rem] desktop:py-[3.75rem] rounded-[2rem] laptop:shadow-lg">
-          <h2 className="desktop:text-sb36 tablet:text-sb28 text-sb18 desktop:mb-[2.125rem] tablet:mb-[1.5rem] mb-[1.25rem]">
+        <div className="laptop:bg-white desktop:px-[4.5rem] laptop:px-[4.5rem] laptop:py-[3.75rem] rounded-[2rem] laptop:shadow-lg ">
+          <h2 className="laptop:text-sb36 tablet:text-sb28 text-sb18 desktop:mb-[2.125rem] tablet:mb-[1.5rem] mb-[1.25rem]">
             {post?.title}
           </h2>
-          <div className="flex desktop:mb-[3.25rem] tablet:mb-[1.5rem] mb-[1.25rem]">
-            <p className="mr-[2rem]">{post?.date}</p>
-            <p className="text-sb12 text-mainBlue">Chia sẻ bài viết</p>
+          <div className="flex desktop:mb-[3.25rem] laptop:text-m18 tablet:text-m16 text-sb12 tablet:mb-[1.5rem] mb-[1.25rem]">
+            <div className="flex gap-3">
+              <FaRegCalendar />
+              <p className="mr-[2rem] ">{post?.date}</p>
+            </div>
+            <div className="flex items-center gap-1 text-mainBlue">
+              <PiShareFatLight />
+              <p className="">Chia sẻ bài viết</p>
+            </div>
           </div>
           <div className="relative aspect-[16/10] desktop:mb-[3rem] tablet:mb-[1.5rem] mb-[1.25rem]">
             <Image src={post?.featuredImage?.node?.sourceUrl} alt="Educenter" fill />
           </div>
-          <p className="desktop:mb-[3rem] tablet:mb-[1.5rem] mb-[1.25rem]">
           <div
-                  className="lineClamp3 laptop:text-m18 text-m16  px-4 mb-4 text-[#1A1A1E]"
+                  className="lineClamp3 laptop:text-m18 text-m16  px-4 desktop:mb-[3rem] tablet:mb-[1.5rem] mb-[1.25rem] text-[#1A1A1E]"
                   dangerouslySetInnerHTML={{ __html: post?.excerpt }}
                 ></div>
-          </p>
-          <div className="bg-[#F6F9FF] tablet:p-[1.75rem] p-[1.25rem] rounded-[2rem] desktop:mb-[3rem] tablet:mb-[1.5rem] mb-[1.25rem]">
-            <h3 className="text-sb16 mb-[1rem]">Nội dung chính</h3>
-            <h3 className="text-sb16 mb-[1rem]">
+          <div className="bg-[#F6F9FF] tablet:text-sb18 text-sb14 tablet:p-[1.75rem] p-[1.25rem] rounded-[2rem] desktop:mb-[3rem] tablet:mb-[1.5rem] mb-[1.25rem]">
+            <h3 className="mb-[1rem]">Nội dung chính</h3>
+            <h3 className="mb-[1rem]">
               Suy nghĩ lại về vai trò của AI
             </h3>
-            <h3 className="text-sb16 mb-[1rem]">
+            <h3 className="mb-[1rem]">
               Chuẩn bị cho thế giới cookie hậu bên thứ ba
             </h3>
-            <h3 className="text-sb16 mb-[1rem]">
+            <h3 className="mb-[1rem]">
               Mở khóa tăng trưởng, lợi nhuận năng lượng
             </h3>
-            <h3 className="text-sb16 mb-[1rem]">
+            <h3 className="mb-[1rem]">
               Đổi mới sự tham gia của khách hàng
             </h3>
-            <h3 className="text-sb16 mb-[1rem]">Kết</h3>
+            <h3 className="mb-[1rem]">Kết</h3>
           </div>
           <div
                   className="laptop:text-m18 text-m16 desktop:mb-[3rem]  px-4 mb-4 text-[#1A1A1E]"
                   dangerouslySetInnerHTML={{ __html: post?.content }}
                 ></div>
-          <p>Đánh giá bài viết</p>
+          <div className="flex items-center gap-3">
+            <p>Đánh giá bài viết</p>
+            <ul className="flex text-gray-500">
+              <li><MdStarRate/></li>
+              <li><MdStarRate/></li>
+              <li><MdStarRate/></li>
+              <li><MdStarRate/></li>
+              <li><MdStarRate/></li>
+            </ul>
+          </div>      
         </div>
       </div>
-      <div className="desktop:bg-[#FAFAFA] px-[1.25rem] desktop:px-[17%] tablet:px-[1.75rem] desktop:pb-[6.25rem] tablet:pb-[2rem] pb-[2.5rem] laptop:shadow-none tablet:shadow-lg">
+      <div className="desktop:bg-[#FAFAFA] px-[1.25rem] desktop:px-[17%] laptop:px-[6%] tablet:px-[1.75rem] desktop:pb-[6.25rem] tablet:pb-[2rem] pb-[2.5rem] laptop:shadow-none tablet:shadow-lg">
         <RelatedPost authorId={post?.author?.node?.databaseId} />
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function ContactFormV2() {
   return (
     <div className=" bg-[#F6F9FF] w-full desktop:pb-24 pb-12 px-4">
       <div className="flex flex-col gap-4 laptop:gap-8 desktop:gap-12 mx-auto desktop:w-3/5">
-        <h2 className="text-sb22 w-max mx-auto">Liên hệ với chúng tôi</h2>
+        <h2 className="text-sb22 w-max mx-auto">Đăng kí tư vấn miễn phí</h2>
 
         <div className="shadow-lg rounded-[2rem] p-[2rem] grid grid-cols-1 laptop:grid-cols-2 divide-y laptop:divide-y-0 laptop:divide-x bg-white">
           <div className="flex flex-wrap ">

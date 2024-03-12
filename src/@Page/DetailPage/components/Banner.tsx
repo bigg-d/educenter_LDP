@@ -4,57 +4,80 @@ import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import clsx from "clsx";
 // import Image from "next/image";
 import { Content1 } from "@/@Page/HomePage/components/Service";
+import Image from "next/image";
 
 const Banner = () => {
   const { tablet, mobile, laptop, desktop } = useBreakpoints();
 
   return (
-    <section className=" flex items-center desktop:px-[15rem] tablet:px-[3.375rem] desktop:py-[6.25rem] tablet:py-[2.5rem] gap-[2.25rem] justify-between">
-      <div className="w-full desktop:pr-[7.5rem] tablet:w-[48.5%]">
-        <h2 className="bg-gradient-to-r from-[#3E60FE] to-[rgb(210,60,255)] text-transparent bg-clip-text font-semibold desktop:text-[2.75rem] tablet:text-sb18 text-sb22">
+    <section className="flex tablet:flex-row flex-col items-center desktop:px-[15rem] laptop:px-[9.72%] tablet:px-[3.375rem] laptop:py-[6.25rem] tablet:py-[2.5rem] desktop:gap-[2.25rem] laptop:gap-[6.25rem] justify-between">
+      <div className={clsx("w-full desktop:pr-[7.5rem] tablet:order-1 order-2 tablet:w-[48.75%]",{"px-5 py-7":mobile})}>
+        <h2 className="bg-gradient-to-r from-[#3E60FE] to-[rgb(210,60,255)] text-transparent bg-clip-text font-semibold desktop:text-[2.75rem] laptop:leading-none laptop:text-[2.5rem] tablet:text-sb18 text-sb22">
           Tạo đề thi, ôn thi, làm bài thi mọi lúc mọi nơi
         </h2>
-        <h3 className="desktop:text-sb18 tablet:text-sb14 desktop:mt-[1.875rem] tablet:mt-[0.875rem]">
+        <h3 className="laptop:text-sb18 text-sb14 desktop:mt-[1.875rem] laptop:mt-[2.75rem] tablet:mt-[0.875rem] mt-[1rem]">
           Tạo đề thi, ôn thi, làm bài thi mọi lúc mọi nơi
         </h3>
-        <ul className="text-m18 mt-[3rem]">
-          <li className="flex mb-7">
-            <SchoolIcon className="text-green-400" />
-            <p className={clsx("ml-3")}>
+        <ul className="text-m18 laptop:mt-[3rem] tablet:mt-[1.5rem] mt-[1.75rem]">
+          <li className="flex items-center laptop:gap-6 gap-3 laptop:mb-7 mb-3 relative">
+            <div className="relative laptop:w-[2.25rem] w-5 aspect-square">
+              <Image src="/image/DetailPage/eduIcon_banner.svg" alt="icon" fill />
+            </div>
+            <p className="laptop:text-m18 tablet:text-m12  text-[0.75rem] font-medium">
               Tạo đề thi, ôn thi, làm bài thi mọi lúc mọi nơi
             </p>
           </li>
-          <li className="flex mb-7">
-            <SchoolIcon className="text-green-400" />
-            <p className={clsx("ml-3")}>
+          <li className="flex items-center laptop:gap-6 gap-3 laptop:mb-7 mb-3 relative">
+            <div className="relative laptop:w-[2.25rem] w-5 aspect-square">
+              <Image src="/image/DetailPage/briefcaseIcon_banner.svg" alt="icon" fill />
+            </div>
+            <p className="laptop:text-m18 tablet:text-m12  text-[0.75rem] font-medium">
               Tạo đề thi, ôn thi, làm bài thi mọi lúc mọi nơi
             </p>
           </li>
-          <li className="flex mb-7">
-            <SchoolIcon className="text-green-400" />
-            <p className={clsx("ml-3")}>
+          <li className="flex items-center laptop:gap-6 gap-3 laptop:mb-7 mb-3 relative">
+            <div className="relative laptop:w-[2.25rem] w-5 aspect-square">
+            <Image src="/image/DetailPage/appIcon_banner.svg" alt="icon" fill />
+            </div>
+            <p className="laptop:text-m18 tablet:text-m12  text-[0.75rem] font-medium">
               Tạo đề thi, ôn thi, làm bài thi mọi lúc mọi nơi
             </p>
           </li>
-          <li className="flex mb-7">
-            <SchoolIcon className="text-green-400" />
-            <p className={clsx("ml-3")}>
+          <li className="flex items-center laptop:gap-6 gap-3 laptop:mb-7 mb-3 relative">
+            <div className="relative laptop:w-[2.25rem] w-5 aspect-square">
+              <Image src="/image/DetailPage/cpuIcon_banner.svg" alt="icon" fill />
+            </div>
+            <p className="laptop:text-m18 tablet:text-m12  text-[0.75rem] font-medium">
               Tạo đề thi, ôn thi, làm bài thi mọi lúc mọi nơi
             </p>
           </li>
+          
         </ul>
-        <div className={clsx("flex mt-4 gap-4", { "justify-evenly": mobile })}>
-          <button className="btn-gradient">Đăng kí dịch vụ</button>
-          <button className="btn-default">Tư vấn miễn phí</button>
+        <div className={clsx("flex mt-4 desktop:gap-4 tablet:gap-3", { "justify-evenly": mobile })}>
+          <button className="rounded-[30px] cursor-pointer tablet:text-sb14 text-m14 desktop:text-[1.4rem] laptop:text-[1.1rem] inline-block bg-gradient-to-r from-mainBlue to-mainViolet py-2 px-4  laptop:px-6 laptop:py-4 text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-[2px]">Đăng kí dịch vụ</button>
+          <button className="rounded-[30px] cursor-pointer tablet:text-sb14 text-m14 desktop:text-[1.4rem] laptop:text-[1.1rem] px-4 py-2 inline-block bg-white text-[#4A4A4A] border-2 font-[500] laptop:px-6 laptop:py-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-[2px];">Tư vấn miễn phí</button>
         </div>
       </div>
 
       <div
         className={clsx(
-          "tablet:w-[45%] laptop:w-2/5 desktop:w-2/5 desktop:h-[90vh] tablet:h-[50vh] bg-cover flex items-center justify-center rounded-[50px]"
+          "hidden tablet:flex tablet:w-[45%] laptop:w-2/5 desktop:w-2/5 w-full desktop:h-[90vh] tablet:h-[50vh] bg-cover items-center justify-center tablet:rounded-[50px] tablet:order-2 order-1",
         )}
         style={{
           backgroundImage: 'url("/images/home/bg_service.png")',
+        }}
+      >
+        <div className="w-full h-full flex items-center justify-center">
+          <Content1 />
+        </div>
+      </div>
+
+      <div
+        className={clsx(
+          "w-full bg-cover flex tablet:hidden items-center justify-center order-1 p-[5rem]",
+        )}
+        style={{
+          backgroundImage: 'url("/image/DetailPage/bannerBg_mobile.svg")',
         }}
       >
         <div className="w-full h-full flex items-center justify-center">

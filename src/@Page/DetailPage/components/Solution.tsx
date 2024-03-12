@@ -14,7 +14,7 @@ const Solution = () => {
     },
     {
       title:
-        "Nhân viên được khuyến khích đưa ra ý tưởng mới, thử nghiệm và thất bại",
+        "Ứng dụng công nghệ phù hợp với nhu cầu của học viên.",
       icon: (
         <Image src="/image/DetailPage/eduIcon.svg" alt="icon" fill />
       ),
@@ -46,8 +46,8 @@ const Solution = () => {
     },
   ];
   return (
-    <section className="relative bg-[#FFF8E1] px-[1.25rem] desktop:px-[15rem] overflow-hidden tablet:px-[2rem] pt-[8.75rem] tablet:pt-[15rem] pb-[2.5rem] desktop:pb-[5rem] tablet:pb-[3.75rem] z-10">
-      <div className="w-[160%] tablet:w-[142%] desktop:w-1/2 absolute top-0 inset-1/2 transform -translate-x-1/2 aspect-video z-0">
+    <section className="relative bg-[#FFF8E1] px-[1.25rem] desktop:px-[15rem] laptop:px-[6.25rem] overflow-hidden tablet:px-[2rem] pt-[8.75rem] tablet:pt-[15rem] pb-[2.5rem] desktop:pb-[5rem] tablet:pb-[3.75rem] z-10">
+      <div className="w-[160%] tablet:w-[142%] laptop:w-[72%] desktop:w-1/2 absolute top-0 inset-1/2 transform -translate-x-1/2 aspect-video z-0">
         <Image
           className="z-0"
           src="/image/DetailPage/starBackground.svg"
@@ -64,10 +64,10 @@ const Solution = () => {
       {/* <div className="absolute w-full aspect-video">
         <Image src='/image/DetailPage/starBackground.svg' fill alt="Educenter" title="Educenter" />
       </div> */}
-      <h2 className="relative font-semibold text-center text-sb18 desktop:text-[2.5rem] tablet:text-sb28 mb-[2rem] desktop:mb-[4.125rem] tablet:mb-[3.75rem] z-[1]">
+      <h2 className="relative font-semibold text-center text-sb18 laptop:text-[2.5rem] tablet:text-sb28 mb-[2rem] desktop:mb-[4.125rem] tablet:mb-[3.75rem] z-[1]">
         Giải pháp của chúng tôi
       </h2>
-      <ul className="relative grid desktop:grid-cols-3 tablet:grid-cols-2 gap-[1.25rem] desktop:gap-[2.5rem] tablet:gap-[1.75rem]">
+      <ul className="relative grid laptop:grid-cols-3 tablet:grid-cols-2 gap-[1.25rem] laptop:gap-[2.5rem] tablet:gap-[1.75rem]">
         {solutions.map((solution,index) => {
           return (
             <li key={index} className="bg-white p-6 tablet:p-7 rounded-[1.75rem]">

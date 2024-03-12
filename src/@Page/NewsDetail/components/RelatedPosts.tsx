@@ -5,7 +5,7 @@ import { getRelatedPost } from "@/@Page/News/services/blogService";
 const RelatedPosts = async (props:any) =>{
   const relatedPost =await  getRelatedPost(props?.authorId)
     return (
-        <div className="bg-white desktop:px-[4.5rem] desktop:py-[3.75rem] desktop:mb-[2.5rem] rounded-[2rem] laptop:shadow-lg">
+        <div className="bg-white laptop:px-[4.5rem]  desktop:py-[3.75rem] laptop:py-[4.5rem] desktop:mb-[2.5rem] laptop:mb-[4.5rem] rounded-[2rem] laptop:shadow-lg">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <h3 className="tablet:text-sb28 text-sb18 desktop:mb-[2.5rem]">Bài viết liên quan</h3>
