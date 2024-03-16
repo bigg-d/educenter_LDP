@@ -38,10 +38,10 @@ function StaticUI() {
       <div className="grid grid-cols-1 gap-4 tablet:grid-cols-3 items-center bg-mainGradient p-[5%]">
         <div className="flex flex-col  gap-8 items-center">
           <p className="text-white text-m18">Số điện thoại</p>
-          <p className="text-white text-m22">034231218512</p>
+          <p className="text-white  desktop:text-sb28 laptop:text-sb22 tablet:text-m18 text-sb18">034231218512</p>
         </div>
         <div className="flex flex-col  gap-8 items-center">
-          <p className="text-white text-m18">Liên hệ với tư vấn viên</p>
+          <p className="text-white text-m18">Chat với tư vấn viên</p>
           <div className="flex items-center gap-4">
             <div className="rounded-md bg-white transition-all duration-100 hover:outline hover:outline-blue-300 p-2">
               <div className="relative aspect-square w-[45px]">
