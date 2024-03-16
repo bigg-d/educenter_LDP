@@ -3,6 +3,8 @@
 import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import Image from "next/image";
 import Link from "next/link";
+import QuizPercentRunner from "./QuizPercentRunner";
+import { Slide } from "react-awesome-reveal";
 
 export default function ResultDevelopment() {
   const { laptop } = useBreakpoints();
@@ -31,21 +33,15 @@ export default function ResultDevelopment() {
 
           <div className="grid grid-cols-1 laptop:grid-cols-3 gap-6">
             <div className="flex flex-col gap-2">
-              <span className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text">
-                500 +
-              </span>
+              <QuizPercentRunner end={500} suffix={"+"} className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"/>
               <span className="text-[1.375rem]">Khách hàng doanh nghiệp</span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text">
-                200K +
-              </span>
+              <QuizPercentRunner end={200} suffix={"K+"} className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"/>
               <span className="text-[1.375rem]">Người dùng sản phẩm</span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text">
-                90%
-              </span>
+              <QuizPercentRunner end={90} suffix={"%"} className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"/>
               <span className="text-[1.375rem]">Phản hồi tích cực</span>
             </div>
           </div>

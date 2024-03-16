@@ -57,9 +57,9 @@ const HeaderLayout = () => {
         <div className="w-[90%] h-20 flex items-center justify-between">
           <div className="flex gap-12 items-center">
             <Link href="/">
-              <span className="text-[1.4rem] font-bold duration-300 transition-all hover:text-mainBlue">
+              <p className="text-[1.4rem] font-bold duration-300 transition-all hover:text-mainBlue">
                 EduCenter
-              </span>
+              </p>
             </Link>
 
             {isTable && (

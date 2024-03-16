@@ -11,6 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        fhd: "1920px",
         desktop: "1536px",
         laptop: "1200px",
         tablet: "768px",

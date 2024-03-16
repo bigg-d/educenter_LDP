@@ -2,6 +2,7 @@
 import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import clsx from "clsx";
 import Image from "next/image";
+import { Bounce, Fade, Flip, Hinge, JackInTheBox, Slide, Zoom } from "react-awesome-reveal";
 
 const Problem = () => {
   const { tablet, laptop, mobile } = useBreakpoints();
@@ -29,20 +30,20 @@ const Problem = () => {
   ];
 
   return (
-    <section className="flex flex-wrap bg-[#F6F9FF] py-[1.4rem] px-[1.25rem] desktop:px-[15rem] desktop:py-[6.25rem] laptop:px-[6.25rem] laptop:py-[5rem] tablet:p-[2rem] items-end laptop:items-start">
-      <h2 className="laptop:w-full mx-auto tablet:w-[38%] laptop:order-1 tablet:order-2  desktop:text-[2.5rem] laptop:text-sb28 tablet:text-sb22 mb-[1.5rem] tablet:mb-0 laptop:mb-[5rem]  font-semibold">
+    <section className="flex flex-wrap bg-[#F6F9FF] py-[1.4rem] px-[1.25rem] fhd:px-[15rem] fhd:py-[6.25rem] laptop:px-[6.25rem] laptop:py-[5rem] tablet:p-[2rem] items-end laptop:items-start">
+      <h2 className="laptop:w-full mx-auto tablet:w-[38%] laptop:order-1 tablet:order-2  fhd:text-[2.5rem] laptop:text-sb28 tablet:text-sb22 mb-[1.5rem] tablet:mb-0 laptop:mb-[5rem]  font-semibold">
         Vấn đề doanh nghiệp gặp phải
       </h2>
-      <div className="w-full tablet:w-1/2 laptop:order-2 tablet:order-1 desktop:pr-[10rem] laptop:pr-[6.25rem]">
+      <Fade direction="left" duration={1200} className="w-full tablet:w-1/2 laptop:order-2 tablet:order-1 fhd:pr-[9rem] laptop:pr-[6.25rem]">
         <div className="relative aspect-[597/547]">
           <Image src="/image/DetailPage/Frame 40670.svg" fill alt="image" />
         </div>
-      </div>
+      </Fade>
       <div className="w-full laptop:w-1/2 tablet:order-3 mt-[2rem] tablet:mt-[3.75rem] laptop:mt-0">
         {issues?.map((issue,index) => {
           return (
-            <div key={index} className="mb-6">
-              <h3 className={clsx("text-sb16 laptop:text-sb22 tablet:text-sb18 laptop:mb-3 tablet:mb-2",{"hidden":index === 0})}>
+            <div key={index} className="mb-8">
+              <h3 className={clsx("text-sb16 laptop:text-sb22 tablet:text-sb18 laptop:mb-3 tablet:mb-2",{"fhd:block laptop:hidden":index === 0})}>
                 {issue?.title}
               </h3>
               <p className="text-m14 laptop:text-m16">{issue?.desc}</p>
