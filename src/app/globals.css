@@ -6,10 +6,28 @@
 .slick-slider {
   width: 100%;
 }
-.slick-slide {
+/* .slick-slide {
   padding: 0 20px;
-}
+} */
 
+@media only screen and (min-width: 1536px) {
+  .slider-arrow .slick-next:before {
+    position: absolute !important;
+    color: black !important;
+    line-height: 0 !important;
+    opacity: 1.25;
+    font-size: 30px;
+    /* right: -2100%; */
+  }
+  .slider-arrow .slick-prev:before {
+    color: black !important;
+    position: absolute !important;
+    line-height: 0 !important;
+    opacity: 1.25;
+    font-size: 30px;
+    /* left: -2100%; */
+  }
+}
 @media only screen and (max-width: 475px) {
   html {
     font-size: 12px;
