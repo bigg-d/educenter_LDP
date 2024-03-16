@@ -76,12 +76,12 @@ const Comment = () => {
         })}
       >
         <div className="w-full   2xl:w-[40%] flex flex-col 2xl:gap-[3.75rem]  laptop:w-[30%] justify-between mt-[10%] laptop:mt-0">
-          <div className="self-stretch text-zinc-900 text-2xl md:text-[2rem] 2xl:text-[4rem] font-bold font-['Montserrat'] laptop:text-[2.5rem] laptop:leading-[4rem] leading-[2rem] 2xl:leading-[6rem] 2xl:w-[80%] tracking-wider">
+          <div className="self-stretch text-zinc-900 text-2xl md:text-[2rem] 2xl:text-[4rem] font-bold  laptop:text-[2.5rem] laptop:leading-[4rem] leading-[2rem] 2xl:leading-[6rem] 2xl:w-[80%] tracking-wider">
             <h2>Khách hàng nói gì về Educenter ?</h2>
           </div>
           {tablet && (
             <div className="2xl:px-8 2xl:py-4 px-3 py-4 bg-blue-500 rounded-full justify-center items-center gap-1 inline-flex 2xl:w-[60%]">
-              <div className="text-center text-white text-base 2xl:text-xl 2xl:font-bold font-['Montserrat'] leading-normal tracking-tight">
+              <div className="text-center text-white text-base 2xl:text-xl 2xl:font-bold  leading-normal tracking-tight">
                 Chứng thực từ khách hàng
               </div>
             </div>
@@ -117,16 +117,16 @@ const Comment = () => {
                     </div>
                     <div className="self-stretch justify-start items-center gap-5 inline-flex">
                       <img src={pro.image} alt="" />
-                      <span className="grow shrink basis-0 text-zinc-600 text-lg  font-bold font-['Montserrat']">
+                      <span className="grow shrink basis-0 text-zinc-600 text-lg  font-bold ">
                         {pro.name}
                       </span>
                     </div>
                   </div>
                   <div className="self-stretch  flex-col justify-start items-start gap-5 flex">
-                    <span className="self-stretch text-zinc-900 text-sm  font-medium font-['Montserrat']">
+                    <span className="self-stretch text-zinc-900 text-sm  font-medium ">
                       {pro.text}
                     </span>
-                    <span className="self-stretch text-zinc-900 text-sm  font-medium font-['Montserrat']">
+                    <span className="self-stretch text-zinc-900 text-sm  font-medium ">
                       {pro.value}
                     </span>
                   </div>
@@ -153,16 +153,16 @@ const Comment = () => {
                         </div>
                         <div className="self-stretch justify-start items-center gap-5 inline-flex">
                           <img src={pro.image} alt="" />
-                          <span className="grow shrink basis-0 text-zinc-600 text-lg 2xl:text-xl font-bold font-['Montserrat']">
+                          <span className="grow shrink basis-0 text-zinc-600 text-lg 2xl:text-xl font-bold ">
                             {pro.name}
                           </span>
                         </div>
                       </div>
                       <div className="self-stretch mt-5  flex-col justify-start items-start gap-5 flex">
-                        <span className="self-stretch text-zinc-900 text-sm 2xl:text-lg font-medium font-['Montserrat']">
+                        <span className="self-stretch text-zinc-900 text-sm 2xl:text-lg font-medium ">
                           {pro.text}
                         </span>
-                        <span className="self-stretch text-zinc-900 text-sm 2xl:text-lg font-medium font-['Montserrat']">
+                        <span className="self-stretch text-zinc-900 text-sm 2xl:text-lg font-medium ">
                           {pro.value}
                         </span>
                       </div>
