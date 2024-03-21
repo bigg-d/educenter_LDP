@@ -12,11 +12,12 @@ export default function ResultDevelopment() {
   return (
     <>
       <div
-        className="flex flex-col gap-8  mx-auto laptop:p-8 desktop:p-12 w-full p-6"
+        className="flex flex-col bg-auto gap-8  mx-auto laptop:p-8 desktop:p-0 w-full p-6"
         style={{
           background: `url("/images/home/journey_${
             laptop ? "desktop" : "mobile"
           }.svg")`,
+          backgroundSize: "cover",
         }}
       >
         <div className="desktop:w-4/5 mx-auto w-full flex flex-col gap-6">
@@ -58,7 +59,7 @@ export default function ResultDevelopment() {
           </div>
         </div>
 
-        <div className="w-full flex flex-col gap-6 mx-auto desktop:w-[85%] desktop:my-32">
+        <div className="w-full flex flex-col gap-6 mx-auto desktop:w-4/5 desktop:my-32">
           <h2 className="laptop:text-[3rem] text-[2.4rem] font-bold">
             Báo chí nói gì về Educenter
           </h2>
@@ -67,7 +68,7 @@ export default function ResultDevelopment() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col laptop:flex-row gap-4 desktop:w-4/5 w-[90%] mx-auto mb-16">
+      <div className="flex flex-col laptop:flex-row gap-4 desktop:w-4/5 w-[90%] laptop:gap-[20%] desktop:gap-[10%] mx-auto mb-16">
         <div className="w-full laptop:w-1/2 desktop:w-2/5 flex flex-col gap-4 laptop:order-1 order-2">
           <h3 className="text-[2rem] font-[500] ">
             EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên

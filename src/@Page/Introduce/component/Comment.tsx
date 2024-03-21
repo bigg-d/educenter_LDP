@@ -39,6 +39,12 @@ const Comment = () => {
           slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
     ],
     beforeChange: function (currentSlide: any, nextSlide: any) {
       setActiveIndex(nextSlide);
@@ -129,16 +135,16 @@ const Comment = () => {
                       </div>
                       <div className="self-stretch justify-start items-center gap-5 inline-flex">
                         <img src={pro.image} alt="" />
-                        <span className="grow shrink basis-0 text-zinc-600 text-lg  font-bold font-['Montserrat']">
+                        <span className="grow shrink basis-0 text-zinc-600 text-lg  font-bold ">
                           {pro.name}
                         </span>
                       </div>
                     </div>
                     <div className="self-stretch  flex-col justify-start items-start gap-5 flex">
-                      <span className="self-stretch text-zinc-900 text-sm  font-medium font-['Montserrat']">
+                      <span className="self-stretch text-zinc-900 text-sm  font-medium ">
                         {pro.text}
                       </span>
-                      <span className="self-stretch text-zinc-900 text-sm  font-medium font-['Montserrat']">
+                      <span className="self-stretch text-zinc-900 text-sm  font-medium ">
                         {pro.value}
                       </span>
                     </div>

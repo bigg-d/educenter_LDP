@@ -20,8 +20,8 @@ export default function Trust() {
         <h3 className="font-[500] laptop:text-[26px] text-center laptop:text-start">
           KHÁCH HÀNG CỦA EDUCENTER
         </h3>
-        <div className="flex gap-4 items-center w-full justify-between">
-          <div className="relative aspect-[3/1] w-[100px]">
+        <div className="flex flex-wrap gap-4 items-center w-full justify-between">
+          <div className="relative hidden md:block aspect-[3/1] w-[100px]">
             <Image
               alt="EduCenter"
               title="EduCenter"
@@ -29,7 +29,7 @@ export default function Trust() {
               fill
             />
           </div>
-          <div className="relative aspect-square w-[100px]">
+          <div className="relative hidden md:block aspect-square w-[100px]">
             <Image
               alt="EduCenter"
               title="EduCenter"
@@ -37,7 +37,7 @@ export default function Trust() {
               fill
             />
           </div>
-          <div className="relative aspect-square w-[100px]">
+          <div className="relative  aspect-square w-[100px]">
             <Image
               alt="EduCenter"
               title="EduCenter"

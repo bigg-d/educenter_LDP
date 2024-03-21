@@ -79,7 +79,7 @@ const Banner = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: false,
-    arrows: true,
+    arrows: false,
     // autoplaySpeed: 2000
   };
   return (
@@ -91,7 +91,7 @@ const Banner = () => {
           </div>
         )}
         <Fade direction="up" delay={1e3}>
-          <div className="tablet:w-[85%] w-[80%] tablet:mx-auto flex flex-col text-sb28 laptop:text-[3.25rem] laptop:leading-[4rem] font-['Montserrat'] tablet:text-[2.5rem] fhd:text-[3.5rem]  fhd:w-[80%]">
+          <div className="tablet:w-[85%] w-[80%] tablet:mx-auto flex flex-col text-sb28 laptop:text-[3.25rem] laptop:leading-[4rem]  tablet:text-[2.5rem] fhd:text-[3.5rem]  fhd:w-[80%]">
             <h2 className="bg-gradient-to-r from-[#3E60FE] to-[#D23CFF] text-transparent bg-clip-text  font-semibold">
               Chúng tôi đã có 10 năm
             </h2>
