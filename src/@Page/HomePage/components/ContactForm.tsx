@@ -62,6 +62,7 @@ export default function ContactForm() {
                   name="name"
                   label={"Họ và tên"}
                   placeholder="Nhập họ và tên"
+                  required
                 />
                 <CoreInput
                   labelClassName="text-white text-[1.4rem]"
@@ -69,6 +70,7 @@ export default function ContactForm() {
                   name="email"
                   label={"Email"}
                   placeholder="Nhập Email"
+                  required
                 />
                 <CoreInput
                   labelClassName="text-white text-[1.4rem]"
@@ -76,6 +78,7 @@ export default function ContactForm() {
                   name="phone"
                   label={"Số điện thoại"}
                   placeholder="Nhập số điện thoại"
+                  required
                 />
                 <CoreAutocomplete
                   labelClassName="text-white text-[1.4rem]"
@@ -90,6 +93,7 @@ export default function ContactForm() {
                   name="phone"
                   label={"Số điện thoại"}
                   placeholder="Nhập số điện thoại"
+                  required
                 />
               </div>
             </div>

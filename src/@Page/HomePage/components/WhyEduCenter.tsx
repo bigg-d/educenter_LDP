@@ -19,7 +19,7 @@ export default function WhyEduCenter() {
     },
   ];
   return (
-    <div className=" flex flex-col gap-4 items-center laptop:py-24 py-4  bg-[#F6F9FF] w-[90%] mx-auto">
+    <div className=" flex flex-col gap-4 items-center laptop:py-24 py-4  bg-[#F6F9FF] w-full mx-auto">
       <div className="bg-mainGradient rounded-[40px] text-white px-8 py-4 laptop:w-max text-[1.2rem] text-center laptop:text-[2rem] desktop:text-[2.3rem]">
         Tại sao doanh nghiệp nên chọn Educenter
       </div>

@@ -11,16 +11,15 @@ export default function ResultDevelopment() {
   // const bgUrl = `/images/home/journey_${laptop ? "desktop" : "mobile"}.svg`
   return (
     <>
-      {" "}
       <div
-        className="flex flex-col gap-8 desktop:w-[90%] mx-auto laptop:p-8 desktop:p-12 w-[90%] p-6"
+        className="flex flex-col gap-8  mx-auto laptop:p-8 desktop:p-12 w-full p-6"
         style={{
           background: `url("/images/home/journey_${
             laptop ? "desktop" : "mobile"
           }.svg")`,
         }}
       >
-        <div className="desktop:w-3/5  w-full flex flex-col gap-6">
+        <div className="desktop:w-4/5 mx-auto w-full flex flex-col gap-6">
           <h2 className="laptop:text-[3rem] font-bold text-[1.4rem]">
             Kết quả của hành trình phát triển
           </h2>
@@ -33,21 +32,33 @@ export default function ResultDevelopment() {
 
           <div className="grid grid-cols-1 laptop:grid-cols-3 gap-6">
             <div className="flex flex-col gap-2">
-              <QuizPercentRunner end={500} suffix={"+"} className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"/>
+              <QuizPercentRunner
+                end={500}
+                suffix={"+"}
+                className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"
+              />
               <span className="text-[1.375rem]">Khách hàng doanh nghiệp</span>
             </div>
             <div className="flex flex-col gap-2">
-              <QuizPercentRunner end={200} suffix={"K+"} className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"/>
+              <QuizPercentRunner
+                end={200}
+                suffix={"K+"}
+                className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"
+              />
               <span className="text-[1.375rem]">Người dùng sản phẩm</span>
             </div>
             <div className="flex flex-col gap-2">
-              <QuizPercentRunner end={90} suffix={"%"} className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"/>
+              <QuizPercentRunner
+                end={90}
+                suffix={"%"}
+                className="laptop:text-[5rem] text-[3rem] font-bold text-transparent bg-gradient-to-r from-mainViolet to-mainBlue bg-clip-text"
+              />
               <span className="text-[1.375rem]">Phản hồi tích cực</span>
             </div>
           </div>
         </div>
 
-        <div className="w-full flex flex-col gap-6 desktop:my-32">
+        <div className="w-full flex flex-col gap-6 mx-auto desktop:w-[85%] desktop:my-32">
           <h2 className="laptop:text-[3rem] text-[2.4rem] font-bold">
             Báo chí nói gì về Educenter
           </h2>
@@ -56,7 +67,7 @@ export default function ResultDevelopment() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col laptop:flex-row gap-4 desktop:pl-[5%] w-[90%] mx-auto">
+      <div className="flex flex-col laptop:flex-row gap-4 desktop:w-4/5 w-[90%] mx-auto mb-16">
         <div className="w-full laptop:w-1/2 desktop:w-2/5 flex flex-col gap-4 laptop:order-1 order-2">
           <h3 className="text-[2rem] font-[500] ">
             EduQuiz – Hành trình trở thành công cụ ôn thi đắc lực cho sinh viên

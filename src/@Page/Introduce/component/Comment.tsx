@@ -76,11 +76,11 @@ const Comment = () => {
           "text-center w-[90%] flex-col-reverse ": mobile,
         })}
       >
-        <div className="w-full   fhd:w-[40%] flex flex-col fhd:gap-[3.75rem]  laptop:w-[30%] justify-between mt-[10%] laptop:mt-0">
+        <div className="w-full   fhd:w-[40%] flex flex-col fhd:gap-[3.75rem]  laptop:w-[30%] justify-center mt-[10%] laptop:mt-0">
           <Fade
             direction="up"
             delay={1e2}
-            className="self-stretch text-zinc-900 text-2xl md:text-[2rem] fhd:text-[4rem] font-bold font-['Montserrat'] laptop:text-[2.5rem] laptop:leading-[4rem] leading-[2rem] fhd:leading-[6rem] fhd:w-[80%] tracking-wider"
+            className="self-stretch text-zinc-900 text-2xl md:text-[2rem] fhd:text-[4rem] font-bold  laptop:text-[2.5rem] laptop:leading-[4rem] leading-[2rem] fhd:leading-[6rem] fhd:w-[80%] tracking-wider"
           >
             <h2>Khách hàng nói gì về Educenter ?</h2>
           </Fade>
@@ -90,7 +90,7 @@ const Comment = () => {
               delay={1e2}
               className="fhd:px-8 fhd:py-4 px-3 py-4 bg-blue-500 rounded-full justify-center items-center gap-1 inline-flex fhd:w-[60%]"
             >
-              <div className="text-center text-white text-base fhd:text-xl fhd:font-bold font-['Montserrat'] leading-normal tracking-tight">
+              <div className="text-center text-white text-base fhd:text-xl fhd:font-bold leading-normal tracking-tight">
                 Chứng thực từ khách hàng
               </div>
             </Fade>
@@ -166,16 +166,16 @@ const Comment = () => {
                         </div>
                         <div className="self-stretch justify-start items-center gap-5 inline-flex">
                           <img src={pro.image} alt="" />
-                          <span className="grow shrink basis-0 text-zinc-600 text-lg fhd:text-xl font-bold font-['Montserrat']">
+                          <span className="grow shrink basis-0 text-zinc-600 text-lg fhd:text-xl font-bold ">
                             {pro.name}
                           </span>
                         </div>
                       </div>
                       <div className="self-stretch mt-5  flex-col justify-start items-start gap-5 flex">
-                        <span className="self-stretch text-zinc-900 text-sm fhd:text-lg font-medium font-['Montserrat']">
+                        <span className="self-stretch text-zinc-900 text-sm fhd:text-lg font-medium ">
                           {pro.text}
                         </span>
-                        <span className="self-stretch text-zinc-900 text-sm fhd:text-lg font-medium font-['Montserrat']">
+                        <span className="self-stretch text-zinc-900 text-sm fhd:text-lg font-medium ">
                           {pro.value}
                         </span>
                       </div>
