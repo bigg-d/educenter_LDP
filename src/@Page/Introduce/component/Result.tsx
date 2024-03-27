@@ -28,35 +28,29 @@ const Result = () => {
           Kết quả của hành trình phát triển
         </div>
       </Fade>
-      <div
-        className={clsx("", {
-          "w-full relative ": tablet,
-          "w-full relative  flex justify-center": mobile,
-        })}
-      >
-        <div
-          className={clsx("", {
-            "mt-5 desktop:mt-0 relative w-full h-auto aspect-[2/1] ": tablet,
-            " relative w-full h-auto aspect-[1/1]": mobile,
-          })}
-        >
-          {mobile ? (
-            <Image src="/image/Curvedmobile.png" fill alt="" />
-          ) : (
-            <Image src="/image/Curved1.svg" fill alt="" />
-          )}
+      <div className="w-full relative  flex justify-center ">
+        <div className="relative w-full h-auto aspect-[1/1] tablet:mt-5 desktop:mt-0 tablet:aspect-[2/1]">
+          <Image
+            className="tablet:hidden"
+            src="/image/Curvedmobile.png"
+            fill
+            alt=""
+          />
+
+          <Image
+            className="hidden tablet:block"
+            src="/image/Curved1.svg"
+            fill
+            alt=""
+          />
         </div>
         <div className="absolute top-[50%] md:hidden w-full  aspect-[2/1]">
           <Image src="/image/Curved2.png" alt="" fill />
         </div>
         <Fade
           direction="up"
-          delay={1e2}
-          className={clsx("", {
-            " w-[35%] laptop:w-[19%]  h-[25%]   laptop:h-auto absolute top-[10%] laptop:top-[18%] left-[5%] laptop:left-[10%]":
-              tablet,
-            "absolute top-0  w-[80%]  h-[23%] ": mobile,
-          })}
+          triggerOnce
+          className="absolute top-0  w-[80%] h-[23%] tablet:w-[35%] laptop:w-[19%]  tablet:h-[25%]   laptop:h-auto tablet:top-[10%] laptop:top-[18%] tablet:left-[5%] laptop:left-[10%]"
         >
           <div className="w-full h-[100%] flex gap-5 tablet:gap-5 ">
             <img src="/image/do.svg" alt="" className="h-[100%]" />
