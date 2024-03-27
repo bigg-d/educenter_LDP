@@ -2,7 +2,15 @@
 import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import clsx from "clsx";
 import Image from "next/image";
-import { Bounce, Fade, Flip, Hinge, JackInTheBox, Slide, Zoom } from "react-awesome-reveal";
+import {
+  Bounce,
+  Fade,
+  Flip,
+  Hinge,
+  JackInTheBox,
+  Slide,
+  Zoom,
+} from "react-awesome-reveal";
 
 const Problem = () => {
   const { tablet, laptop, mobile } = useBreakpoints();
@@ -34,16 +42,31 @@ const Problem = () => {
       <h2 className="laptop:w-full mx-auto tablet:w-[38%] laptop:order-1 tablet:order-2  fhd:text-[2.5rem] laptop:text-sb28 tablet:text-sb22 mb-[1.5rem] tablet:mb-0 laptop:mb-[5rem]  font-semibold">
         Vấn đề doanh nghiệp gặp phải
       </h2>
-      <Fade direction="left" duration={1200} className="w-full tablet:w-1/2 laptop:order-2 tablet:order-1 fhd:pr-[9rem] laptop:pr-[6.25rem]">
+      <Fade
+        direction="left"
+        duration={1200}
+        className="w-full tablet:w-1/2 laptop:order-2 tablet:order-1 fhd:pr-[9rem] laptop:pr-[6.25rem]"
+      >
         <div className="relative aspect-[597/547]">
-          <Image src="/image/DetailPage/Frame 40670.svg" fill alt="image" />
+          <Image
+            src="/image/DetailPage/Frame 40670.svg"
+            fill
+            alt="image"
+            quality={100}
+            loading="lazy"
+          />
         </div>
       </Fade>
       <div className="w-full laptop:w-1/2 tablet:order-3 mt-[2rem] tablet:mt-[3.75rem] laptop:mt-0">
-        {issues?.map((issue,index) => {
+        {issues?.map((issue, index) => {
           return (
             <div key={index} className="mb-8">
-              <h3 className={clsx("text-sb16 laptop:text-sb22 tablet:text-sb18 laptop:mb-3 tablet:mb-2",{"fhd:block laptop:hidden":index === 0})}>
+              <h3
+                className={clsx(
+                  "text-sb16 laptop:text-sb22 tablet:text-sb18 laptop:mb-3 tablet:mb-2",
+                  { "fhd:block laptop:hidden": index === 0 }
+                )}
+              >
                 {issue?.title}
               </h3>
               <p className="text-m14 laptop:text-m16">{issue?.desc}</p>
