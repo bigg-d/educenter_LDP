@@ -404,9 +404,9 @@ export function ScrollTablet() {
       </div>
       <div
         className={clsx(
-          "tablet:w-1/2 laptop:w-2/5 desktop:w-2/5 h-[90vh] bg-cover flex items-center justify-center rounded-[50px]",
+          "tablet:w-1/2 laptop:w-2/5 desktop:w-2/5 tablet:h-[65vh] laptop:h-[90vh] bg-cover flex items-center justify-center rounded-[50px]",
           {
-            "sticky top-[5vh]": showAnimate,
+            "sticky top-[15vh] laptop:top-[5vh]": showAnimate,
           }
         )}
         style={{
