@@ -75,22 +75,21 @@ const Comment = () => {
   ];
 
   return (
-    <div className="w-full py-8 md:py-0 h-auto bg-blue-50 laptop:py-10 flex flex-col gap-9 md:gap-[7rem] ">
-      <div className="mx-auto flex text-center w-[90%] flex-col-reverse laptop:flex-row tablet:w-4/5 tablet:justify-between tablet:gap-8 fhd:gap-0">
-        <div className="w-full   desktop:w-[40%] flex flex-col fhd:gap-[3.75rem]  laptop:w-[30%] justify-center mt-[10%] laptop:mt-0">
-          <div className="self-stretch text-zinc-900 text-2xl md:text-[2rem] fhd:text-[4rem] font-bold  laptop:text-[2.5rem] laptop:leading-[4rem] leading-[2rem] fhd:leading-[6rem] fhd:w-[80%] tracking-wider">
-            <h2>Khách hàng nói gì về Educenter ?</h2>
-          </div>
-          {tablet && (
-            <div className="fhd:px-8 fhd:py-4 px-3 py-4 bg-blue-500 rounded-full justify-center items-center gap-1 inline-flex fhd:w-[60%]">
-              <div className="text-center text-white text-base fhd:text-xl fhd:font-bold leading-normal tracking-tight">
-                Chứng thực từ khách hàng
-              </div>
+    <div className="w-full  py-8 md:py-0 h-auto bg-blue-50 laptop:py-10 flex flex-col gap-9 md:gap-[7rem] ">
+      <div className="mx-auto w-[90%] desktop:w-4/5  grid grid-cols-1 gap-12 tablet:grid-cols-2 laptop:grid-cols-3">
+        <div className="w-full  justify-center flex flex-col tablet:gap-8 laptop:gap-16  fhd:gap-[3.75rem]   mt-[10%] laptop:mt-0">
+          <h2 className="text-[1.45rem] text-center tablet:text-[2.5rem] desktop:text-[4.25rem] font-bold tablet:text-start ">
+            Khách hàng nói gì về Educenter ?
+          </h2>
+
+          <div className="hidden w-max  fhd:px-8 fhd:py-4 px-3 py-4 bg-blue-500 rounded-full justify-center items-center gap-1 tablet:inline-flex fhd:w-[60%]">
+            <div className="text-center text-white text-base fhd:text-xl fhd:font-bold leading-normal tracking-tight">
+              Chứng thực từ khách hàng
             </div>
-          )}
+          </div>
         </div>
         {/* <Fade direction="up" delay={1e2}> */}
-        <div className="grid desktop:grid-cols-4  grid-rows-3 grid-cols-3 gap-8 md:gap-3 fhd:gap-10 laptop:gap-3 h-full">
+        <div className="grid laptop:col-span-2 py-4 desktop:grid-cols-4  grid-rows-3 grid-cols-3 gap-8 md:gap-3 fhd:gap-10 laptop:gap-3 h-full">
           {listImage.map((item, index) => (
             <div
               key={index}

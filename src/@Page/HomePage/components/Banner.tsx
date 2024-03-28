@@ -59,7 +59,7 @@ export function BannerTextContent2() {
   return (
     <div className="flex flex-col gap-8 relative">
       <div className="bg-[#F6F9FF] -z-[1] h-full laptop:hidden right-0 w-[90%] absolute " />
-      <p className="text-m18 px-4 laptop:w-full laptop:text-start laptop:px-0 my-4 tablet:text-[1.4rem] tablet:mx-auto tablet:w-4/5 tablet:text-center laptop:my-0">
+      <p className="text-m18 px-4 laptop:w-full laptop:text-start laptop:px-0 my-4 tablet:text-[28px] tablet:leading-[2.5rem] tablet:mx-auto tablet:w-4/5 tablet:text-center laptop:my-0">
         EduCenter cung cấp các giải pháp công nghệ về giáo dục và đào tạo. Giúp
         hàng ngàn doanh nghiệp xây dựng tổ chức thông minh.
       </p>
