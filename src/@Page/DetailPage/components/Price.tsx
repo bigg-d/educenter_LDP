@@ -45,17 +45,17 @@ const Price = () => {
     },
   ];
   return (
-    <section className="px-[1.25rem] desktop:px-[12.5%] laptop:px-[2.5rem] tablet:px-[2rem] py-[2.5rem] desktop:py-[5rem] tablet:py-[3.75rem] bg-[#F6F9FF]">
-      <h2 className=" text-center text-sb18 desktop:text-[2.5rem] tablet:text-sb28 mb-[2.5rem] laptop:mb-[13.125rem] tablet:mb-[3.75rem]">
+    <section className="px-[1.25rem] fhd:px-[12.75%] desktop:px-[4rem] laptop:px-[2.5rem] tablet:px-[2rem] py-[2.5rem] fhd:py-[5rem] tablet:py-[3.75rem] bg-[#F6F9FF]">
+      <h2 className=" text-center text-sb18 fhd:text-[2.5rem] tablet:text-sb28 mb-[2.5rem] fhd:mb-[18%] laptop:mb-[13.125rem] tablet:mb-[3.75rem]">
         Báo giá sản phẩm
       </h2>
-      <div className="flex tablet:justify-between flex-wrap desktop:gap-[1.875rem] laptop:gap-[0.75rem]  desktop:[&>*]:-mx-10 desktop:[&>*]:px-20 laptop:[&>*]:-mx-1 laptop:[&>*]:px-[1.5rem] rounded-[2.25rem] laptop:bg-white">
+      <div className="flex tablet:justify-between flex-wrap fhd:gap-[1.875rem] laptop:gap-[0.75rem] gap-[2rem]  fhd:[&>*]:-mx-10 fhd:[&>*]:px-[3rem] laptop:[&>*]:-mx-1 laptop:[&>*]:px-[2.5rem] rounded-[2.25rem] laptop:bg-white">
         {options.map((option: any, index) => {
           return (
             <div
               key={index}
               className={clsx(
-                " laptop:w-1/3 h-max p-[1.25rem] desktop:p-[3rem] rounded-[2.25rem] flex flex-col justify-center",
+                " laptop:w-[32.5%] h-max p-[1.25rem] animate-zoomOut fhd:p-[3rem] rounded-[2.25rem] flex flex-col justify-center",
                 {
                   "laptop:-mt-[10rem] tablet:p-[2.5rem] bg-mainGradient text-white order-1 laptop:order-2 w-full shadow-lg": index == 1,
                   "text-[#848199] order-2 bg-white tablet:px-[1.75rem] tablet:py-[2.25rem] w-full tablet:w-[47%]": index !== 1,
@@ -98,7 +98,7 @@ const Price = () => {
                   </p>
                 </div>
 
-                <p className="text-m14 laptop:text-m18 mb-[2.5rem] laptop:col-span-1 tablet:col-span-3 desktop:text-center text-left">
+                <p className="text-m14 tablet:text-m18 mb-[2.5rem] laptop:col-span-1 tablet:col-span-3 laptop:text-center text-left">
                   {option?.detail}
                 </p>
               </div>
@@ -124,7 +124,7 @@ const Price = () => {
                       />
                     </div>
                     <p
-                      className={clsx("desktop:text-m18 text-m14", {
+                      className={clsx("fhd:text-m18 text-m14", {
                         "text-white": index === 1,
                       })}
                     >
@@ -135,10 +135,10 @@ const Price = () => {
               </ul>
               <div
                 className={clsx(
-                  "text-center",
+                  "text-center ",
 
                   {
-                    "btn-gradient": index !== 1,
+                    "btn-gradient fhd:w-4/5 laptop:w-3/5 w-full m-auto": index !== 1,
                     "btn-default": index === 1,
                   }
                 )}

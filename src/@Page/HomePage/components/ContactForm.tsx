@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useContactForm } from "../hooks/useContactForm";
 import { CoreAutocomplete, CoreInput } from "@/@Common/components/Input";
+import { CircularProgress } from "@mui/material";
 
 export default function ContactForm() {
   const {
@@ -51,7 +52,10 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <form className="laptop:col-span-2 flex flex-wrap gap-4  laptop:pl-12">
+          <form
+            onSubmit={onSubmit}
+            className="laptop:col-span-2 flex flex-wrap gap-4  laptop:pl-12"
+          >
             {/* FORM */}
             <div className="flex laptop:flex-col gap-4 w-full laptop:py-0 py-12 flex-wrap desktop:w-4/5">
               <p className="text-[#F0C7FF] text-[1.5rem]">Đăng kí tư vấn</p>
@@ -62,6 +66,7 @@ export default function ContactForm() {
                   name="name"
                   label={"Họ và tên"}
                   placeholder="Nhập họ và tên"
+                  required
                 />
                 <CoreInput
                   labelClassName="text-white text-[1.4rem]"
@@ -69,6 +74,7 @@ export default function ContactForm() {
                   name="email"
                   label={"Email"}
                   placeholder="Nhập Email"
+                  required
                 />
                 <CoreInput
                   labelClassName="text-white text-[1.4rem]"
@@ -76,6 +82,7 @@ export default function ContactForm() {
                   name="phone"
                   label={"Số điện thoại"}
                   placeholder="Nhập số điện thoại"
+                  required
                 />
                 <CoreAutocomplete
                   labelClassName="text-white text-[1.4rem]"
@@ -90,6 +97,7 @@ export default function ContactForm() {
                   name="phone"
                   label={"Số điện thoại"}
                   placeholder="Nhập số điện thoại"
+                  required
                 />
               </div>
             </div>
@@ -97,7 +105,7 @@ export default function ContactForm() {
               className="rounded-md self-end laptop:my-7 w-full laptop:w-auto transition-all duration-200 font-bold hover:bg-mainBlue hover:text-white text-mainBlue bg-white px-6 py-4 border border-mainBlue"
               type="submit"
             >
-              Đăng ký tư vấn
+              {isSubmitting ? <CircularProgress /> : "Đăng ký tư vấn"}
             </button>
           </form>
         </div>

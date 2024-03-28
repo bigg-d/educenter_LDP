@@ -367,13 +367,13 @@ export interface VerticalCarouselProps {
 function VerticalCarousel(props: VerticalCarouselProps) {
   const { data, index } = props;
 
-  //   const speeds = [2000, 3000, 2400, 2100];
+  const speeds = [2000, 3000, 2400, 2100];
   const settings = {
     dots: false,
     infinite: true,
     autoplay: true,
-    // speed: speeds[index] + 1000,
-    speed: 2000,
+    speed: speeds[index] + 1000,
+    // speed: 2000,
     autoplaySpeed: 2000,
     slidesToShow: 2,
     slidesToScroll: 1,

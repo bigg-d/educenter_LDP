@@ -9,11 +9,18 @@ export const useContactForm = () => {
     defaultValues: {},
     resolver: yupResolver(
       Yup.object({
-        name: Yup.string().trim().required().min(3).max(255),
+        name: Yup.string()
+          .trim()
+          .required("Trường này là bắt buộc")
+          .min(3, "Tối thiểu 3 ký tự")
+          .max(255, "Tối đa 255 ký tự"),
         phone: Yup.string()
-          .required()
+          .required("Trường này là bắt buộc")
           .matches(REGEX.PHONE, "Số điện thoại không hợp lệ!"),
-        email: Yup.string().trim().required().email(),
+        email: Yup.string()
+          .trim()
+          .required("Trường này là bắt buộc")
+          .email("Email không hợp lệ"),
       })
     ),
   });

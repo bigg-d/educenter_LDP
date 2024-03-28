@@ -17,7 +17,7 @@ const RelatedPosts = async (props:any) =>{
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 desktop:gap-[2.5rem] laptop:gap-8 tablet:gap-[1.25rem] tablet:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 desktop:gap-[2.5rem] laptop:gap-[2rem] tablet:gap-[1.25rem] tablet:grid-cols-3">
             {relatedPost.map((post) => (
               <div
                 key={post?.title}

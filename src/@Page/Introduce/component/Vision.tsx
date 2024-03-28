@@ -12,14 +12,13 @@ const Vision = () => {
       <div className="flex flex-col items-center w-[85%]   gap-[3rem] relative z-[1] tablet:w-[65%] tablet:gap-[3.25rem] tablet:static">
         <Fade
           direction="up"
-          delay={1e3}
           className="w-[40%] md:w-[33%] fhd:w-[15%] px-6 py-2 rounded-full  items-center gap-1  bg-blue-100 flex justify-center"
         >
           <div className="text-center md:text-[1.375rem] fhd:text-sb22   text-sb14 font-semibold  leading-tight bg-gradient-to-r from-[#3E60FE] to-[#D23CFF] text-transparent bg-clip-text  md:py-3">
             Tầm nhìn
           </div>
         </Fade>
-        <Fade direction="up" delay={1e3} className="w-full">
+        <Fade direction="up" className="w-full">
           <div className="flex flex-col text-center w-full gap-2 tablet:gap-4 fhd:gap-10">
             <div className=" md:flex md:flex-col laptop:flex-row laptop:items-center   laptop:justify-center md:gap-5 laptop:gap-2">
               <h2 className="fhd:w-[25%]  text-zinc-900 text-[1.5rem] fhd:text-[4rem] md:text-[2.625rem] font-semibold  leading-[38px] tracking-wide">

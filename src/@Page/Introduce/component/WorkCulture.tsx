@@ -71,11 +71,8 @@ const WorkCulture = () => {
         })}
       >
         <Zoom
-          className={clsx("", {
-            "w-[90%] mx-auto laptop:w-1/2  h-auto relative aspect-[1004/887] laptop:left-[-5%] laptop:mx-0":
-              tablet,
-            " top-0 aspect-[1004/887] w-full  relative": mobile,
-          })}
+          triggerOnce
+          className="top-0 aspect-[1004/887] w-full  relative tablet:w-[90%] tablet:mx-auto laptop:w-1/2  tablet:h-auto  laptop:left-[-5%] laptop:mx-0"
         >
           <Image
             fill
@@ -87,9 +84,11 @@ const WorkCulture = () => {
         <div className="laptop:absolute w-full items-center laptop:items-start  laptop:w-[60%] fhd:w-1/2 h-max fhd:left-[39%] laptop:left-[30%]  laptop:top-[2rem] fhd:top-[4.25rem] gap-6 laptop:gap-[2rem] fhd:gap-[5rem] flex flex-col  ">
           {wordMap.map((item, index) => (
             <Fade
+              key={Math.random().toString()}
+              triggerOnce
               className="w-full flex flex-col items-center desktop:items-start desktop:gap-[2.7rem]"
               direction="right"
-              delay={index * 1000}
+              delay={index * 50}
             >
               <div
                 key={index}
