@@ -15,7 +15,7 @@ export default function ContactForm() {
   } = useContactForm();
   return (
     <div className="bg-mainGradient flex items-center gap-4 desktop:py-24 py-12 px-[5%] laptop:px-0">
-      <div className="flex flex-col gap-4 laptop:w-[90%] desktop:w-4/5 mx-auto">
+      <div className="flex flex-col gap-4 w-full laptop:w-[90%] desktop:w-4/5 mx-auto">
         <h3 className="font-[600] text-[2.4rem]  laptop:text-[3.75rem] text-white">
           Bắt đầu xây dựng
         </h3>

@@ -1,11 +1,8 @@
-"use client";
-import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 
 const Operate = () => {
-  const { desktop } = useBreakpoints();
   const listData = [
     {
       images: "/image/operate.svg",
@@ -29,7 +26,7 @@ const Operate = () => {
       <h2 className="text-zinc-900 w-[90%] text-center text-3xl laptop:text-4xl fhd:text-5xl font-bold">
         Vận hành tổ chức thông minh
       </h2>
-      <div className="w-[90%] mx-auto grid grid-cols-1 laptop:grid-cols-3 gap-10 desktop:grid-cols-4">
+      <div className="w-[90%] tablet:w-full mx-auto grid grid-cols-1 laptop:grid-cols-3 gap-10 desktop:grid-cols-4">
         {listData?.map((item, index) => (
           <div
             key={index}

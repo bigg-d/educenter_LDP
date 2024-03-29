@@ -1,4 +1,4 @@
-import Layout from "../@Layout";
+// import Layout from "../@Layout";
 import ContactForm from "../HomePage/components/ContactForm";
 import Banner from "./components/Banner";
 import Benefit from "./components/Benefit";
@@ -9,7 +9,7 @@ import Solution from "./components/Solution";
 
 const DetailPage = () => {
   return (
-    <Layout>
+    <>
       <Banner />
       <Problem />
       <Solution />
@@ -17,7 +17,7 @@ const DetailPage = () => {
       <Process />
       <Price />
       <ContactForm />
-    </Layout>
+    </>
   );
 };
 export default DetailPage;

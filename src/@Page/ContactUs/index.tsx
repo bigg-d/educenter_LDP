@@ -1,14 +1,14 @@
 import Image from "next/image";
-import Layout from "../@Layout";
+// import Layout from "../@Layout";
 import ContactFormV2 from "./components/ContactFormV2";
 
 export default function ContactUs() {
   return (
-    <Layout>
+    <>
       <StaticUI />
 
       <ContactFormV2 />
-    </Layout>
+    </>
   );
 }
 
@@ -38,7 +38,9 @@ function StaticUI() {
       <div className="grid grid-cols-1 gap-4 tablet:grid-cols-3 items-center bg-mainGradient p-[5%]">
         <div className="flex flex-col  gap-8 items-center">
           <p className="text-white text-m18">Số điện thoại</p>
-          <p className="text-white  desktop:text-sb28 laptop:text-sb22 tablet:text-m18 text-sb18">034231218512</p>
+          <p className="text-white  desktop:text-sb28 laptop:text-sb22 tablet:text-m18 text-sb18">
+            034231218512
+          </p>
         </div>
         <div className="flex flex-col  gap-8 items-center">
           <p className="text-white text-m18">Chat với tư vấn viên</p>

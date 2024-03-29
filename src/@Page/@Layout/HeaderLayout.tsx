@@ -54,7 +54,7 @@ const HeaderLayout = () => {
   return (
     <HeaderContainer>
       <div className="sticky top-0 z-10 flex justify-center w-full bg-white shadow-md">
-        <div className="w-[90%] h-20 flex items-center justify-between">
+        <div className="w-[90%] h-[64px] flex items-center justify-between">
           <div className="flex gap-12 items-center">
             <Link href="/">
               <p className="text-[1.4rem] font-bold duration-300 transition-all hover:text-mainBlue">

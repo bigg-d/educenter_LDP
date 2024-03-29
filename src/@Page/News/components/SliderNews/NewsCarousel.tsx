@@ -71,10 +71,13 @@ export default function NewCarousel(props: Props) {
   const { laptop } = useBreakpoints();
 
   return (
-    <div className="slider-container" id="phong-carousel">
+    <div
+      className="slider-container [&>.slick-slider>button.slick-arrow::before]:shadow-2xl"
+      id="phong-carousel"
+    >
       <Slider {...settings}>
         {list.map((item, index) => (
-          <div key={item.title} className="relative  ">
+          <div key={item.title} className="relative">
             <div className="aspect-[1.604/1] w-full relative laptop:w-[70%]">
               <Image
                 src={item.featuredImage.node.sourceUrl}

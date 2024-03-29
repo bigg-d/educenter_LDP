@@ -4,10 +4,12 @@ import { useBreakpoints } from "@/@Common/hooks/useBreakpoints";
 import Image from "next/image";
 import Link from "next/link";
 import QuizPercentRunner from "./QuizPercentRunner";
-import { Slide } from "react-awesome-reveal";
+import { Parallax } from "react-scroll-parallax";
+// import { Slide } from "react-awesome-reveal";
 
 export default function ResultDevelopment() {
   const { laptop } = useBreakpoints();
+
   // const bgUrl = `/images/home/journey_${laptop ? "desktop" : "mobile"}.svg`
   return (
     <>

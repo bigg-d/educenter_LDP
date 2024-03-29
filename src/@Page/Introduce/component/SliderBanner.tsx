@@ -1,8 +1,79 @@
 import React from "react";
-import { frameList } from "./Banner";
 import Image from "next/image";
 
 const SliderBanner = () => {
+  const frameList = [
+    {
+      year: "2024",
+      items: [
+        {
+          day: "26/01/2024",
+          text: "Ra mắt website",
+          image: "/image/image3.png",
+        },
+        {
+          day: "26/12/2024",
+          text: "Ra mắt phần mềm",
+          image: "/image/image4.png",
+        },
+      ],
+    },
+    {
+      year: "2023",
+      items: [
+        {
+          day: "26/01/2023",
+          text: "Ra mắt website",
+          image: "/image/image3.png",
+        },
+        {
+          day: "26/12/2023",
+          text: "Ra mắt phần mềm",
+          image: "/image/image4.png",
+        },
+      ],
+    },
+    {
+      year: "2022",
+      items: [
+        {
+          day: "26/01/2022",
+          text: "Ra mắt website",
+          image: "/image/image3.png",
+        },
+        {
+          day: "26/12/2022",
+          text: "Ra mắt phần mềm",
+          image: "/image/image4.png",
+        },
+      ],
+    },
+    {
+      year: "2021",
+      items: [
+        {
+          day: "26/01/2023",
+          text: "Ra mắt website",
+          image: "/image/image3.png",
+        },
+        {
+          day: "26/12/2023",
+          text: "Ra mắt phần mềm",
+          image: "/image/image4.png",
+        },
+      ],
+    },
+    {
+      year: "2020",
+      items: [
+        {
+          day: "26/1/2022",
+          text: "Khai trương chi nhánh HCM",
+          image: "/image/image6.png",
+        },
+      ],
+    },
+  ];
   return (
     <div className="flex flex-col gap-5">
       <div>

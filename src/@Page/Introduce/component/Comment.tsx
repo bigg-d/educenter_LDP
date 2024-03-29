@@ -78,12 +78,12 @@ const Comment = () => {
     <div className="w-full  py-8 md:py-0 h-auto bg-blue-50 laptop:py-10 flex flex-col gap-9 md:gap-[7rem] ">
       <div className="mx-auto w-[90%] desktop:w-4/5  grid grid-cols-1 gap-12 tablet:grid-cols-2 laptop:grid-cols-3">
         <div className="w-full  justify-center flex flex-col tablet:gap-8 laptop:gap-16  fhd:gap-[3.75rem]   mt-[10%] laptop:mt-0">
-          <h2 className="text-[1.45rem] text-center tablet:text-[2.5rem] desktop:text-[4.25rem] font-bold tablet:text-start ">
+          <h2 className="text-[1.45rem] tablet:w-4/5 laptop:w-full text-center tablet:text-[2.5rem] desktop:text-[4.25rem] font-bold tablet:text-start ">
             Khách hàng nói gì về Educenter ?
           </h2>
 
           <div className="hidden w-max  fhd:px-8 fhd:py-4 px-3 py-4 bg-blue-500 rounded-full justify-center items-center gap-1 tablet:inline-flex fhd:w-[60%]">
-            <div className="text-center text-white text-base fhd:text-xl fhd:font-bold leading-normal tracking-tight">
+            <div className="text-center text-white text-base laptop:text-xl laptop:font-bold leading-normal tracking-tight laptop:px-12">
               Chứng thực từ khách hàng
             </div>
           </div>

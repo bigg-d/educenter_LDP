@@ -66,7 +66,7 @@ const config: Config = {
             transform: "translateX(-50%) scale(0)",
             boxShadow: " rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
           },
-          "36%": {
+          "65%": {
             left: "auto",
             right: "-10%",
             top: "-5%",
@@ -77,7 +77,7 @@ const config: Config = {
             transform: " scale(0)",
             boxShadow: " rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
           },
-          "40%": {
+          "70%": {
             left: "auto",
             right: "-10%",
             top: "-5%",
@@ -120,7 +120,7 @@ const config: Config = {
             transform: "translateX(-50%) scale(0)",
             boxShadow: " rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
           },
-          "53%": {
+          "65%": {
             left: "-10%",
             top: "30%",
             opcacity: "0",
@@ -130,7 +130,7 @@ const config: Config = {
             transform: " scale(0)",
             boxShadow: " rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
           },
-          "56%": {
+          "70%": {
             left: "-10%",
             top: "30%",
             opcacity: "1",
@@ -171,7 +171,7 @@ const config: Config = {
             transform: "translateX(-50%) scale(0)",
             boxShadow: " rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
           },
-          "63%": {
+          "65%": {
             left: "auto",
             right: "-4%",
             bottom: "20%",
@@ -183,7 +183,7 @@ const config: Config = {
             transform: " scale(0)",
             boxShadow: " rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
           },
-          "64%": {
+          "70%": {
             left: "auto",
             right: "-4%",
             bottom: "20%",

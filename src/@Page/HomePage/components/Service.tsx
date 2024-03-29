@@ -363,7 +363,7 @@ export function ScrollTablet() {
     };
   }, []);
   return (
-    <div className="laptop:w-full mx-auto tablet:w-[90%] flex justify-between ">
+    <div className="laptop:w-full mx-auto tablet:w-[90%] flex justify-between bg-white">
       <div className="tablet:w-[45%] desktop:w-1/2e w-full ">
         {services.map((item, i) => (
           <div
@@ -371,7 +371,7 @@ export function ScrollTablet() {
             key={item.title}
             className="flex items-center h-[100vh]"
           >
-            <div className="laptop:w-4/5 desktop:w-3/5 flex items-center">
+            <div className="laptop:w-4/5 fhd:w-3/5 flex items-center">
               <div className="flex flex-col gap-8">
                 <h3 className="text-[22px] tablet:text-[24px] laptop:text-[40px] font-bold">
                   {item.title}
@@ -404,7 +404,7 @@ export function ScrollTablet() {
       </div>
       <div
         className={clsx(
-          "tablet:w-1/2 laptop:w-2/5 desktop:w-2/5 tablet:h-[65vh] laptop:h-[90vh] bg-cover flex items-center justify-center rounded-[50px]",
+          "tablet:w-1/2 laptop:w-2/5 desktop:w-2/5 tablet:h-[70vh] laptop:h-[90vh] bg-cover flex items-center justify-center rounded-[50px]",
           {
             "sticky top-[15vh] laptop:top-[5vh]": showAnimate,
           }
