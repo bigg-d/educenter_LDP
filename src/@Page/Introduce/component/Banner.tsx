@@ -8,80 +8,80 @@ import React, { useEffect, useRef, useState } from "react";
 // import CoreCarousel from "../hook/CoreCarousel";
 import Slider from "react-slick";
 import { Slide } from "react-awesome-reveal";
+export const frameList = [
+  {
+    year: "2024",
+    items: [
+      {
+        day: "26/01/2024",
+        text: "Ra mắt website",
+        image: "/image/image3.png",
+      },
+      {
+        day: "26/12/2024",
+        text: "Ra mắt phần mềm",
+        image: "/image/image4.png",
+      },
+    ],
+  },
+  {
+    year: "2023",
+    items: [
+      {
+        day: "26/01/2023",
+        text: "Ra mắt website",
+        image: "/image/image3.png",
+      },
+      {
+        day: "26/12/2023",
+        text: "Ra mắt phần mềm",
+        image: "/image/image4.png",
+      },
+    ],
+  },
+  {
+    year: "2022",
+    items: [
+      {
+        day: "26/01/2022",
+        text: "Ra mắt website",
+        image: "/image/image3.png",
+      },
+      {
+        day: "26/12/2022",
+        text: "Ra mắt phần mềm",
+        image: "/image/image4.png",
+      },
+    ],
+  },
+  {
+    year: "2021",
+    items: [
+      {
+        day: "26/01/2023",
+        text: "Ra mắt website",
+        image: "/image/image3.png",
+      },
+      {
+        day: "26/12/2023",
+        text: "Ra mắt phần mềm",
+        image: "/image/image4.png",
+      },
+    ],
+  },
+  {
+    year: "2020",
+    items: [
+      {
+        day: "26/1/2022",
+        text: "Khai trương chi nhánh HCM",
+        image: "/image/image6.png",
+      },
+    ],
+  },
+];
 const Banner = () => {
   // const { mobile, tablet, laptop, desktop } = useBreakpoints();
-  const frameList = [
-    {
-      year: "2024",
-      items: [
-        {
-          day: "26/01/2024",
-          text: "Ra mắt website",
-          image: "/image/image3.png",
-        },
-        {
-          day: "26/12/2024",
-          text: "Ra mắt phần mềm",
-          image: "/image/image4.png",
-        },
-      ],
-    },
-    {
-      year: "2023",
-      items: [
-        {
-          day: "26/01/2023",
-          text: "Ra mắt website",
-          image: "/image/image3.png",
-        },
-        {
-          day: "26/12/2023",
-          text: "Ra mắt phần mềm",
-          image: "/image/image4.png",
-        },
-      ],
-    },
-    {
-      year: "2022",
-      items: [
-        {
-          day: "26/01/2022",
-          text: "Ra mắt website",
-          image: "/image/image3.png",
-        },
-        {
-          day: "26/12/2022",
-          text: "Ra mắt phần mềm",
-          image: "/image/image4.png",
-        },
-      ],
-    },
-    {
-      year: "2021",
-      items: [
-        {
-          day: "26/01/2023",
-          text: "Ra mắt website",
-          image: "/image/image3.png",
-        },
-        {
-          day: "26/12/2023",
-          text: "Ra mắt phần mềm",
-          image: "/image/image4.png",
-        },
-      ],
-    },
-    {
-      year: "2020",
-      items: [
-        {
-          day: "26/1/2022",
-          text: "Khai trương chi nhánh HCM",
-          image: "/image/image6.png",
-        },
-      ],
-    },
-  ];
 
   const [nav1, setNav1] = useState<any>(null);
   const [nav2, setNav2] = useState<any>(null);
