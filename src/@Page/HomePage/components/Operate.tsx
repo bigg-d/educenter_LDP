@@ -31,19 +31,19 @@ const Operate = () => {
           <div
             key={index}
             className={clsx(
-              "tablet:p-5 w-full  tablet:rounded-3xl tablet:shadow tablet:border-2 items-center gap-5 tablet:border-indigo-50 laptop:flex-col justify-start laptop:items-start  laptop:gap-5 fhd:gap-7 inline-flex",
+              "tablet:p-5 w-full  tablet:rounded-3xl tablet:shadow tablet:border-2 items-center gap-5 tablet:border-indigo-50 laptop:flex-col justify-start laptop:items-start  laptop:gap-5 fhd:gap-7 inline-flex group cursor-pointer",
               {
                 "hidden desktop:flex   ": index > 2,
               }
             )}
           >
-            <div className="relative  w-full aspect-[11/8]    tablet:w-[40%] laptop:w-full">
+            <div className="relative  w-full aspect-[11/8] overflow-hidden   tablet:w-[40%] laptop:w-full">
               <Image
                 src={item.images}
                 fill
                 alt="EduCenter"
                 title="EduCenter"
-                className="w-full h-full"
+                className="w-full h-full group-hover:scale-[1.05] transition-all duration-300"
               />
             </div>
             <div className="flex flex-col gap-3">

@@ -48,7 +48,7 @@ export function Content1() {
         <div className="flex flex-col gap-[12px] rounded-md p-4 bg-[#5074FF]"></div>
       </div>
 
-      <div className="animate-text-1 -right-[10%] tablet:-top-[5%] absolute rounded-2xl text-center  bg-[#3E65FE] text-[white] p-[0.7rem] font-bold border-2">
+      <div className="animate-text-1 -right-[10%] -top-[5%] absolute rounded-2xl text-center  bg-[#3E65FE] text-[white] p-[0.7rem] font-bold border-2">
         Làm trên mọi thiết bị
       </div>
       <div className="animate-text-2 -left-[10%] top-[30%]  absolute rounded-2xl text-center  bg-[#10b981] text-[white] p-[0.7rem] font-bold border-2">

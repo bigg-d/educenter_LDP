@@ -78,7 +78,7 @@ const Comment = () => {
     <div className="w-full  py-8 md:py-0 h-auto bg-blue-50 laptop:py-10 flex flex-col gap-9 md:gap-[7rem] ">
       <div className="mx-auto w-[90%] desktop:w-4/5  grid grid-cols-1 gap-12 tablet:grid-cols-2 laptop:grid-cols-3">
         <div className="w-full  justify-center flex flex-col tablet:gap-8 laptop:gap-16  fhd:gap-[3.75rem]   mt-[10%] laptop:mt-0">
-          <h2 className="text-[1.45rem] tablet:w-4/5 laptop:w-full text-center tablet:text-[2.5rem] desktop:text-[4.25rem] font-bold tablet:text-start ">
+          <h2 className="text-[1.45rem] tablet:w-4/5 fhd:w-4/5 laptop:w-full text-center tablet:text-[2.5rem] desktop:text-[4.25rem] font-bold tablet:text-start ">
             Khách hàng nói gì về Educenter ?
           </h2>
 
@@ -151,7 +151,7 @@ const Comment = () => {
                       "bg-white": activeIndex !== index,
                     })}
                   >
-                    <div className="w-full flex flex-col gap-4 rounded-[1rem] bg-white fhd:p-[3rem] p-4">
+                    <div className="w-full flex flex-col gap-4 rounded-[0.8rem] bg-white fhd:p-[3rem] p-4">
                       <div className="flex fhd:flex-col gap-5">
                         <div className="w-[15%]">
                           <img src="/image/img_mark.png" alt="" />

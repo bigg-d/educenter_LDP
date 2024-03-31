@@ -14,7 +14,7 @@ export default function ResultDevelopment() {
   return (
     <>
       <div
-        className="flex flex-col bg-auto gap-8  mx-auto desktop:p-8  w-full  tablet:p-0"
+        className="px-4 tablet:px-0 flex flex-col bg-auto gap-8  mx-auto desktop:p-0  w-full  tablet:p-0"
         style={{
           background: `url("/images/home/journey_${
             laptop ? "desktop" : "mobile"

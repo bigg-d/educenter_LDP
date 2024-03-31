@@ -100,7 +100,7 @@ const Banner = () => {
 
       <div
         className={clsx(
-          "w-full bg-cover flex tablet:hidden items-center justify-center order-1 p-[5rem]"
+          "w-full bg-cover flex tablet:hidden items-center justify-center order-1 py-[3rem] px-[2rem] laptop:px-[5rem] laptop:py-[5rem]"
         )}
         style={{
           backgroundImage: 'url("/image/DetailPage/bannerBg_mobile.svg")',
